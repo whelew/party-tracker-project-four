@@ -8,8 +8,37 @@ class Monster(models.Model):
     health = models.IntegerField(default=0)
     armour = models.IntegerField(default=0)
     description = models.TextField(blank=True)
-    type = models.CharField(max_length=50)
-    size = models.CharField(max_length=50)
-    
+
+
+    MONSTER_TYPES = [
+    ('aberration', 'Aberration'),
+    ('beast', 'Beast'),
+    ('celestial', 'Celestial'),
+    ('construct', 'Construct'),
+    ('dragon', 'Dragon'),
+    ('elemental', 'Elemental'),
+    ('fey', 'Fey'),
+    ('fiend', 'Fiend'),
+    ('giant', 'Giant'),
+    ('humanoid', 'Humanoid'),
+    ('monstrosity', 'Monstrosity'),
+    ('ooze', 'Ooze'),
+    ('plant', 'Plant'),
+    ('undead', 'Undead'),
+    ]
+
+
+    MONSTER_SIZES = [
+        ('tiny', 'Tiny'),
+        ('small', 'Small'),
+        ('medium', 'Medium'),
+        ('large', 'Large'),
+        ('huge', 'Huge'),
+        ('gargantuan', 'Gargantuan'),
+    ]
+
+    type = models.CharField(max_length=50, choices=MONSTER_TYPES)
+    size = models.CharField(max_length=50, choices=MONSTER_SIZES)
+
     def __str__(self):
         return self.name
