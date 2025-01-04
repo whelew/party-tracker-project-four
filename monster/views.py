@@ -19,8 +19,7 @@ def monster_library(request):
     :template:`monster/monster_library.html`
     """
      
-    queryset = Monster.objects
-    library = get_object_or_404(queryset)
+    library = Monster.objects.all()
 
     return render(
         request, "monster/monster_library.html",

@@ -1,8 +1,33 @@
 {% extends 'base.html' %} {% block content %}
 
-<h1>Hello!</h1>
+<h1>Monster Library</h1>
 
-{{library}}
+<div class="container">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Challenge Rating</th>
+            <th scope="col">Health</th>
+            <th scope="col">Armour Class</th>
+            <th scope="col">Type</th>
+            <th scope="col">Size</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for monster in library %}
+            <tr>
+              <td>{{ monster.name }}</td>
+              <td>{{ monster.challenge_rating }}</td>
+              <td>{{ monster.health }}</td>
+              <td>{{ monster.armour }}</td>
+              <td>{{ monster.type }}</td>
+              <td>{{ monster.size }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+</div>
 
 {% endblock content %}
 
