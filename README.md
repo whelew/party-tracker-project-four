@@ -155,6 +155,11 @@ Below are the relationships between each database model:
 
 #### monster_library
 
+- This view returns all monsters stored in the Monster database model.
+- It then renders this information to a monster_library.html template.
+- A future implementation will increase the number of objects inside the database to add more content for users.
+- All users can access the database without needing to be an authenticated user.
+
 #### campaign_list
 
 - This view displays all the campaigns created by the current user. 
@@ -177,3 +182,10 @@ Below are the relationships between each database model:
 - It also requires an authenticated user through @login_required.
 
 ### Forms
+
+#### CampaignForm
+
+- This simplifies creating and updating campaigns. 
+- It is directly tied to the Campaign model.
+- It is used in the create_campaign view to handle submissions for new campaigns.
+- Thanks to Django it will automatically send the new data to the database.
