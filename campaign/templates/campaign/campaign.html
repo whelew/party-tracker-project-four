@@ -1,6 +1,14 @@
 {% extends 'base.html' %} {% block content %}
 
-<h1 class="text-center">Campaign Home Page</h1>
+<h1 class="text-center">Campaigns</h1>
 
+<ul>
+    {% for campaign in current_campaign %}
+    <li>
+        <a href="{% url 'campaign_detail' campaign.id %}">{{ campaign.name }}</a>
+        - {{ campaign.description }}
+    </li>
+    {% endfor %}
+</ul>
 
 {% endblock content %}
