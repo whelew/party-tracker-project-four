@@ -1,0 +1,282 @@
+[
+    {
+        "model": "monster.Monster",
+        "pk": 1,
+        "fields": {
+            "name": "Goblin",
+            "challenge_rating": 1,
+            "health": 12,
+            "armour": 15,
+            "description": "A small, green humanoid with a mischievous grin, often found in caves or abandoned ruins.",
+            "excerpt": "A common low-level enemy that attacks in packs.",
+            "type": "humanoid",
+            "size": "small"
+        }
+    },
+    {
+        "model": "monster.Monster",
+        "pk": 2,
+        "fields": {
+            "name": "Orc",
+            "challenge_rating": 2,
+            "health": 30,
+            "armour": 13,
+            "description": "A brutish and warlike humanoid with a deep connection to chaos and destruction.",
+            "excerpt": "A dangerous foe with crude weapons and savage tactics.",
+            "type": "humanoid",
+            "size": "medium"
+        }
+    },
+    {
+        "model": "monster.Monster",
+        "pk": 3,
+        "fields": {
+            "name": "Dragon Wyrmling",
+            "challenge_rating": 4,
+            "health": 45,
+            "armour": 17,
+            "description": "A young dragon still learning to control its breath weapon and wings.",
+            "excerpt": "Smaller than an adult dragon but just as deadly.",
+            "type": "dragon",
+            "size": "medium"
+        }
+    },
+    {
+        "model": "monster.Monster",
+        "pk": 4,
+        "fields": {
+            "name": "Dire Wolf",
+            "challenge_rating": 3,
+            "health": 37,
+            "armour": 14,
+            "description": "A giant wolf with feral instincts, often found in the wilderness.",
+            "excerpt": "Known for its ferocity and ability to knock prey prone.",
+            "type": "beast",
+            "size": "large"
+        }
+    },
+    {
+        "model": "monster.Monster",
+        "pk": 5,
+        "fields": {
+            "name": "Skeleton",
+            "challenge_rating": 1,
+            "health": 13,
+            "armour": 13,
+            "description": "An undead creature made of bones, animated by dark magic.",
+            "excerpt": "A staple of necromantic armies, fragile but relentless.",
+            "type": "undead",
+            "size": "medium"
+        }
+    },
+    {
+        "model": "monster.Monster",
+        "pk": 6,
+        "fields": {
+            "name": "Zombie",
+            "challenge_rating": 1,
+            "health": 22,
+            "armour": 8,
+            "description": "A slow-moving undead with decayed flesh and relentless endurance.",
+            "excerpt": "Its resilience makes it hard to put down.",
+            "type": "undead",
+            "size": "medium"
+        }
+    },
+    {
+        "model": "monster.Monster",
+        "pk": 7,
+        "fields": {
+            "name": "Troll",
+            "challenge_rating": 5,
+            "health": 84,
+            "armour": 15,
+            "description": "A regenerating giant with a vicious appetite for destruction.",
+            "excerpt": "Healing wounds rapidly unless fire or acid is used.",
+            "type": "giant",
+            "size": "large"
+        }
+    },
+    {
+        "model": "monster.Monster",
+        "pk": 8,
+        "fields": {
+            "name": "Beholder",
+            "challenge_rating": 13,
+            "health": 180,
+            "armour": 18,
+            "description": "A floating orb of flesh with a central eye and deadly eye rays.",
+            "excerpt": "One of the most iconic and terrifying creatures in D&D.",
+            "type": "aberration",
+            "size": "large"
+        }
+    },
+    {
+        "model": "monster.Monster",
+        "pk": 9,
+        "fields": {
+            "name": "Fire Elemental",
+            "challenge_rating": 5,
+            "health": 102,
+            "armour": 13,
+            "description": "A blazing creature of living fire, leaving destruction in its wake.",
+            "excerpt": "Engulfs enemies in flames with every attack.",
+            "type": "elemental",
+            "size": "large"
+        }
+    },
+    {
+        "model": "monster.Monster",
+        "pk": 10,
+        "fields": {
+            "name": "Gelatinous Cube",
+            "challenge_rating": 2,
+            "health": 84,
+            "armour": 6,
+            "description": "A transparent ooze that engulfs and dissolves anything it touches.",
+            "excerpt": "Deadly traps for adventurers in dungeons.",
+            "type": "ooze",
+            "size": "large"
+        }
+    },
+    {
+        "model": "monster.Monster",
+        "pk": 11,
+        "fields": {
+            "name": "Treant",
+            "challenge_rating": 9,
+            "health": 138,
+            "armour": 16,
+            "description": "A sentient tree that protects its forest with overwhelming strength.",
+            "excerpt": "A guardian of nature, capable of summoning allies.",
+            "type": "plant",
+            "size": "huge"
+        }
+    },
+    {
+        "model": "monster.Monster",
+        "pk": 12,
+        "fields": {
+            "name": "Kobold",
+            "challenge_rating": 1,
+            "health": 5,
+            "armour": 12,
+            "description": "A small, reptilian humanoid often found in mines and caves.",
+            "excerpt": "Tricky and cowardly, but dangerous in numbers.",
+            "type": "humanoid",
+            "size": "small"
+        }
+    },
+    {
+        "model": "monster.Monster",
+        "pk": 13,
+        "fields": {
+            "name": "Mind Flayer",
+            "challenge_rating": 7,
+            "health": 71,
+            "armour": 15,
+            "description": "An intelligent aberration with psionic powers and a taste for brains.",
+            "excerpt": "Feared for their mind control abilities.",
+            "type": "aberration",
+            "size": "medium"
+        }
+    },
+    {
+        "model": "monster.Monster",
+        "pk": 14,
+        "fields": {
+            "name": "Wyvern",
+            "challenge_rating": 6,
+            "health": 110,
+            "armour": 13,
+            "description": "A dragon-like creature with a deadly stinger.",
+            "excerpt": "Fierce aerial predators with venomous tails.",
+            "type": "dragon",
+            "size": "large"
+        }
+    },
+    {
+        "model": "monster.Monster",
+        "pk": 15,
+        "fields": {
+            "name": "Lich",
+            "challenge_rating": 21,
+            "health": 135,
+            "armour": 17,
+            "description": "An undead spellcaster who has achieved immortality.",
+            "excerpt": "Powerful and cunning, with vast magical knowledge.",
+            "type": "undead",
+            "size": "medium"
+        }
+    },
+    {
+        "model": "monster.Monster",
+        "pk": 16,
+        "fields": {
+            "name": "Hydra",
+            "challenge_rating": 8,
+            "health": 172,
+            "armour": 15,
+            "description": "A multi-headed monstrosity that grows more heads when wounded.",
+            "excerpt": "Challenging to defeat due to its regenerative abilities.",
+            "type": "monstrosity",
+            "size": "huge"
+        }
+    },
+    {
+        "model": "monster.Monster",
+        "pk": 17,
+        "fields": {
+            "name": "Harpy",
+            "challenge_rating": 3,
+            "health": 38,
+            "armour": 11,
+            "description": "A winged humanoid with a hypnotic song.",
+            "excerpt": "Lures prey with its captivating melodies.",
+            "type": "monstrosity",
+            "size": "medium"
+        }
+    },
+    {
+        "model": "monster.Monster",
+        "pk": 18,
+        "fields": {
+            "name": "Medusa",
+            "challenge_rating": 6,
+            "health": 127,
+            "armour": 15,
+            "description": "A cursed humanoid whose gaze turns creatures to stone.",
+            "excerpt": "Deadly and tragic, often seeking solitude.",
+            "type": "monstrosity",
+            "size": "medium"
+        }
+    },
+    {
+        "model": "monster.Monster",
+        "pk": 19,
+        "fields": {
+            "name": "Griffon",
+            "challenge_rating": 4,
+            "health": 59,
+            "armour": 12,
+            "description": "A majestic creature with the body of a lion and the wings of an eagle.",
+            "excerpt": "Often used as mounts by brave warriors.",
+            "type": "beast",
+            "size": "large"
+        }
+    },
+    {
+        "model": "monster.Monster",
+        "pk": 20,
+        "fields": {
+            "name": "Phoenix",
+            "challenge_rating": 16,
+            "health": 175,
+            "armour": 18,
+            "description": "A fiery bird that reincarnates upon death, leaving ashes behind.",
+            "excerpt": "A symbol of rebirth and destruction.",
+            "type": "celestial",
+            "size": "huge"
+        }
+    }
+]

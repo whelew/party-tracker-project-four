@@ -8,6 +8,7 @@ class Monster(models.Model):
     health = models.IntegerField(default=0)
     armour = models.IntegerField(default=0)
     description = models.TextField(blank=True)
+    excerpt = models.TextField(blank=True)
 
 
     MONSTER_TYPES = [
@@ -39,6 +40,9 @@ class Monster(models.Model):
 
     type = models.CharField(max_length=50, choices=MONSTER_TYPES)
     size = models.CharField(max_length=50, choices=MONSTER_SIZES)
+
+    class Meta:
+        ordering = ['challenge_rating', 'name']
 
     def __str__(self):
         return f"Monster: {self.name} Challenge Rating: {self.challenge_rating}"

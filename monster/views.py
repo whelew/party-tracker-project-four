@@ -19,9 +19,9 @@ def monster_library(request):
     :template:`monster/monster_library.html`
     """
      
-    library = Monster.objects.all()
+    monsters = Monster.objects.all()
 
     return render(
         request, "monster/monster_library.html",
-        {"library": library},
+        {"monsters": monsters},
         )
