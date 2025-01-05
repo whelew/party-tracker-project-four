@@ -34,7 +34,7 @@ def create_campaign(request):
         if form.is_valid():
             campaign = form.save(commit=False)
             campaign.user = request.user
-            campaign.save
+            campaign.save()
             return redirect('campaign_list')
     else:
         form = CampaignForm()
