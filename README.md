@@ -183,6 +183,25 @@ Below are the relationships between each database model:
 
 ### Forms
 
+Django Forms is a useful tool to handle user input. During my research I found that if I used a form.py it would allow me to validate data from user
+input and map it to my backend automatically.
+
+#### Key Features:
+
+- Automatically ensures data is valid.
+- ModelForms integrates easily with the Django framework.
+
+#### The Process:
+
+- Create a form.py within your app.
+- Create a python class within the form.
+- Call this class when building your view.
+- Then you will be able to render the form in your template using {{ form.as_p }}.
+- {{ form.as_p }} this tells django each field from the form will be wrapped in a p.
+- During development this has let me test to see if my model, view and form is working correctly.
+I will most likely change this at a later date.
+- {% csrf_token %} this is used to protect my site from cross-site attacks.
+
 #### CampaignForm
 
 - This simplifies creating and updating campaigns. 
