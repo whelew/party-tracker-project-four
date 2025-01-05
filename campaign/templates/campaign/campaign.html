@@ -5,10 +5,11 @@
 <ul>
     {% for campaign in current_campaign %}
     <li>
-        <a href="{% url 'campaign_detail' campaign.id %}">{{ campaign.name }}</a>
+        <a href="{% url 'campaign_list' campaign.id %}">{{ campaign.name }}</a>
         - {{ campaign.description }}
     </li>
     {% endfor %}
 </ul>
 
+<a href="{% url 'create_campaign' %}"></a> 
 {% endblock content %}
