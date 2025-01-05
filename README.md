@@ -6,6 +6,11 @@
 
 - [Entity Relationship Diagram](#entity-relationship-diagram)
 
+## [Functionality](#functionality-1)
+
+- [Views](#views)
+- [Forms](#forms)
+
 ## Design
 
 ### Entity Relationship Diagram:
@@ -143,3 +148,32 @@ Below are the relationships between each database model:
 5.	InventoryItems to Item (Many-to-One):
 - Each entry in InventoryItems corresponds to a single Item, but an Item can belong to multiple inventories.
 - InventoryItems includes an item_id as a Foreign Key to Item.
+
+## Functionality
+
+### Views
+
+#### monster_library
+
+#### campaign_list
+
+- This view displays all the campaigns created by the current user. 
+- It uses @login_required which ensures that only authenticated users can access or modify their campaigns. 
+- The campaign_list uses user=request.user to filter all campaigns so the user only sees their own campaigns.
+- It returns the campaigns name and description.
+- It then uses campaign.html as a template to render the request.
+
+#### create_campaign
+
+- This view allows users to create a new instance of the Campaign model.
+- When the form is submitted it will be saved to the database.
+- It also uses @login_required to ensure only authenticated users can create a new instance of Campaign.
+- After a new campaign is created the user is redirected back to campaign.html through the campaign_list view.
+
+#### campaign_info
+
+- This view is to allow the user to load an individual campaign to see it in more detail.
+- In a future implementation it will display all characters and items assosicated with that campaign.
+- It also requires an authenticated user through @login_required.
+
+### Forms
