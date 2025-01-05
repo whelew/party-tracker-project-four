@@ -1,7 +1,9 @@
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 from .models import Campaign, Character
 
 # Create your views here.
+@login_required
 def campaign_list(request):
     """
     Display an individual :model:`campaign.Campaign`.
@@ -16,7 +18,7 @@ def campaign_list(request):
     :template:`campaign/campaign.html`
     """
      
-    current_campaign = Campaign.objects.all()
+    current_campaign = Campaign.objects.filter(user=request.user)
 
     return render(
         request, "campaign/campaign.html",
