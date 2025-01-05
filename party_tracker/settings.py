@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -134,6 +135,7 @@ ACCOUNT_USERNAME_REQUIRED = True
 ACCOUNT_SIGNUP_REDIRECT_URL = '/'  
 LOGIN_REDIRECT_URL = '/' 
 LOGOUT_REDIRECT_URL = '/'  
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
