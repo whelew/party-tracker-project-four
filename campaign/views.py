@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from .models import Campaign, Character
 from .forms import CampaignForm
@@ -40,3 +40,14 @@ def create_campaign(request):
         form = CampaignForm()
     
     return render(request, 'campaign/create_campaign.html', {'form': form})
+
+@login_required
+def campaign_info(request, pk):
+    """
+
+    Display current campaign details.
+
+    """
+    campaign = get_object_or_404(Campaign, pk=pk, user=request.user)
+
+    return render(request, 'campaign/campaign_info.html', {'campaign': campaign})    
