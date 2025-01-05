@@ -26,16 +26,17 @@ def campaign_list(request):
         {"current_campaign": current_campaign},
         )
 
+
 @login_required
 def create_campaign(request):
     if request.method == 'POST':
         form = CampaignForm(request.POST)
         if form.is_valid():
             campaign = form.save(commit=False)
-            campaign.user =request.user
+            campaign.user = request.user
             campaign.save
             return redirect('campaign_list')
     else:
-        form = CampaignForm
+        form = CampaignForm()
     
     return render(request, 'campaign/create_campaign.html', {'form': form})
