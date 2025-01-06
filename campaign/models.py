@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth import get_user_model
+from django.core.validators import MinValueValidator, MaxValueValidator
 
 # Create your models here.
 
@@ -35,15 +36,17 @@ class Character(models.Model):
         ('wizard', 'Wizard'),
         ('artificer', 'Artificer'),
         ]
+    
+    SET_STAT = [MinValueValidator(1), MaxValueValidator(20)]
 
     character_class = models.CharField(max_length=50, choices=CLASS_TYPES)
-    health = models.IntegerField(default=0)
-    strength = models.IntegerField(default=0)
-    dexterity = models.IntegerField(default=0)
-    constitution = models.IntegerField(default=0)
-    intelligence = models.IntegerField(default=0)
-    wisdom = models.IntegerField(default=0)
-    charisma = models.IntegerField(default=0)
+    health = models.IntegerField(default=10, validators=SET_STAT)
+    strength = models.IntegerField(default=10, validators=SET_STAT)
+    dexterity = models.IntegerField(default=10, validators=SET_STAT)
+    constitution = models.IntegerField(default=10, validators=SET_STAT)
+    intelligence = models.IntegerField(default=10, validators=SET_STAT)
+    wisdom = models.IntegerField(default=10, validators=SET_STAT)
+    charisma = models.IntegerField(default=10, validators=SET_STAT)
     campaign = models.ForeignKey(Campaign, on_delete=models.CASCADE, related_name='characters')
 
     class Meta:
