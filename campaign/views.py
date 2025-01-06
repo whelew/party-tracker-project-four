@@ -58,7 +58,7 @@ def create_character(request, campaign_id):
     """
     Allow user to add characters to campaign based on campaign id.
     """
-    campaign = get_object_or_404(request, id=campaign_id, user=request.user)
+    campaign = get_object_or_404(Campaign, id=campaign_id, user=request.user)
 
     if request.method == 'POST':
         form = CharacterForm(request.POST, user=request.user)

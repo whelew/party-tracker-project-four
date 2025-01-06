@@ -13,7 +13,7 @@ class Campaign(models.Model):
         ordering = ['name']
 
     def __str__(self):
-        return self
+        return self.name
     
 
 class Character(models.Model):
