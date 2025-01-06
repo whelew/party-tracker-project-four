@@ -3,37 +3,42 @@
 <h1 class="text-center">{{ campaign.name }}</h1>
 <p class="text-center">{{ campaign.description }}</p>
 
-
-<table class="table table-dark table-striped table-bordered">
-    <thead>
-      <tr>
-        <th scope="col">Name</th>
-        <th scope="col">Class</th>
-        <th scope="col">Health</th>
-        <th scope="col">Str</th>
-        <th scope="col">Dex</th>
-        <th scope="col">Con</th>
-        <th class="col">Int</th>
-        <th class="col">Wis</th>
-        <th class="col">Cha</th>
-      </tr>
-    </thead>
-    <tbody>
-        {% for character in characters %}
-        <tr>
-          <td>{{ character.name }}</td>
-          <td>{{ character.character_class }}</td>
-          <td>{{ character.health }}</td>
-          <td>{{ character.strength }}</td>
-          <td>{{ character.dexterity }}</td>
-          <td>{{ character.constitution }}</td>
-          <td>{{ character.intelligence }}</td>
-          <td>{{ character.wisdom }}</td>
-          <td>{{ character.charisma }}</td>
-        </tr>
-        {% endfor %}
-            <a href="{% url 'create_character' campaign.id %}">Add Character</a>
-    </tbody>
+<div class="col-9-md text-center">
+    <table class="table table-dark table-striped table-bordered">
+        <thead>
+            <tr>
+                <th class="col-1">Name</th>
+                <th class="col-1">Class</th>
+                <th class="col-1">Health</th>
+                <th class="col-1">Str</th>
+                <th class="col-1">Dex</th>
+                <th class="col-1">Con</th>
+                <th class="col-1">Int</th>
+                <th class="col-1">Wis</th>
+                <th class="col-1">Cha</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for character in characters %}
+            <tr>
+                <td>{{ character.name }}</td>
+                <td>{{ character.character_class }}</td>
+                <td>{{ character.health }}</td>
+                <td>{{ character.strength }}</td>
+                <td>{{ character.dexterity }}</td>
+                <td>{{ character.constitution }}</td>
+                <td>{{ character.intelligence }}</td>
+                <td>{{ character.wisdom }}</td>
+                <td>{{ character.charisma }}</td>
+            </tr>
+            {% endfor %}
+            <tr>
+                <td colspan="12" class='text-center'>
+                    <a href="{% url 'create_character' campaign.id %}">Add Character</a>
+                </td>
+            </tr>
+        </tbody>
+</div>
 
 
 {% endblock content %}
