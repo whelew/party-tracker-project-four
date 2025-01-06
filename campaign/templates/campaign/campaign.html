@@ -1,19 +1,50 @@
 {% extends 'base.html' %} {% block content %}
 
-<h1 class="text-center">Campaigns</h1>
 
-<div class="container">
-    <ul>
-        {% for campaign in current_campaign %}
-        <li>
-            <a href="{% url 'campaign_info' campaign.id %}">{{ campaign.name }}</a>
-            - {{ campaign.description }}
-            <a href="{% url 'delete_campaign' campaign.id %}" class="btn btn-danger">Delete Campaign</a>
-        </li>
-        {% endfor %}
-    </ul>
+<div class="container py-4">
+    <div class="row">
+        <div class="col text-center">
+            <h1>Campaigns</h1>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col">
+            <table class="table table-bordered table-striped table-dark">
+                <thead>
+                    <tr>
+                        <th>
+                            Campaign Name:
+                        </th>
+                        <th>
+                            Description:
+                        </th>
+                        <th>
+                            Actions:
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for campaign in current_campaign %}
+                    <tr>
+                        <td>
+                            <a href="{% url 'campaign_info' campaign.id %}">{{ campaign.name }}</a>
+                        </td>
+                        <td>{{ campaign.description }}</td>
+                        <td>
+                            <a href="{% url 'delete_campaign' campaign.id %}" class="btn btn-danger">Delete Campaign</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    <tr>
+                        <td colspan="12" class='text-center'>
+                            <a href="{% url 'create_campaign' %}" class="btn btn-primary">Create New Campaign</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
-<div class="container">
-    <a href="{% url 'create_campaign' %}" class="btn btn-primary">Create New Campaign</a>
-</div>
+
+
 {% endblock content %}

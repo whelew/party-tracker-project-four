@@ -3,6 +3,15 @@ body {
     color: #E0E0FF;
 }
 
+.cotainer {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+
+
 .theme-arcane {
     background-color: #1A1A40; /* Midnight purple */
     border-color: #5D5FEF;     /* Arcane blue */
