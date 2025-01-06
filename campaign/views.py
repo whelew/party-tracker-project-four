@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 from .models import Campaign, Character
 from .forms import CampaignForm, CharacterForm
 
@@ -71,3 +72,21 @@ def create_character(request, campaign_id):
         form = CharacterForm(user=request.user)
     
     return render(request, 'campaign/create_character.html', {'form' : form, 'campaign' : campaign})
+
+
+@login_required
+def delete_campaign(request, campaign_id):
+    """
+    Allow User to Delete a Campaign
+    """
+
+    campaign = get_object_or_404(Campaign, id=campaign_id, user=request.user)
+
+
+    # Once campaign has been deleted, User will be informed and redirected back to campaign list.
+    if request.method == 'POST':
+        campaign.delete()
+        messages.success(request, f'{ campaign.name } has been deleted succesfully.')
+        return redirect('campaign_list')
+    
+    return render(request, 'campaign/confirm_delete', {'campaign' : campaign})
