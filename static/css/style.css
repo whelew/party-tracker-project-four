@@ -1,8 +1,17 @@
 /* Layout of templates */
 
 body {
+    font-family: "IM Fell DW Pica", serif;
+    font-weight: 400;
+    font-style: normal;
     background-color: #1A1A40;
     color: #E0E0FF;
+}
+
+h1, th {
+    font-family: "Uncial Antiqua", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .cotainer {
@@ -34,6 +43,7 @@ body {
 
 .table-arcane tr:hover {
     background-color: #00f0ff;
+    text-decoration: underline;
 }
 
 /* Color Scheme */
