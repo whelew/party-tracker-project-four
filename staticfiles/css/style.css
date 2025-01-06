@@ -1,0 +1,11 @@
+body {
+    background-color: #1A1A40;
+    color: #E0E0FF;
+}
+
+.theme-arcane {
+    background-color: #1A1A40; /* Midnight purple */
+    border-color: #5D5FEF;     /* Arcane blue */
+    color: #E0E0FF;       /* Pale blue */
+    outline: #FFD54F;  /* Arcane gold */
+  }
