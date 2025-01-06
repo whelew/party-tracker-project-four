@@ -14,7 +14,7 @@ h1, th {
     font-style: normal;
 }
 
-.cotainer {
+.container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
@@ -41,8 +41,7 @@ h1, th {
     border-color: #6c5ce7;
 }
 
-.table-arcane tr:hover {
-    background-color: #00f0ff;
+.table-arcane td:hover {
     text-decoration: underline;
 }
 
