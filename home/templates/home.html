@@ -3,6 +3,7 @@
 <div class="login-screen" >
     <img src="/static/images/forest-login.jpg" alt="Ancient Forest Background" class="login-image">
     <div class="container h-50">
+        {% if not user.is_authenticated %}
         <div class="content-overlay">
             <div class="col-md-6 login-content">
                 <h1 class="text-light">Party Tracker</h1>
@@ -12,6 +13,18 @@
                     <a href="accounts/signup/" class="btn btn-primary btn-lg px-5">Sign Up</a>
                 </div>
             </div>
+        </div>
+        {% else %}
+        <div class="content-overlay">
+            <div class="col-md-6 login-content">
+                <h1 class="text-light">Welcome Back to Party Tracker!</h1>
+                <h2 class="text-light">Continue on your campaign. Don't forget to check out the Monster Library.</h2>
+                <div class="mt-4 login-buttons">
+                    <a href="/campaign" class="btn btn-primary btn-lg px-5">Campaigns</a>
+                    <a href="/monster" class="btn btn-primary btn-lg px-5">Monster Library</a>
+                </div>
+            </div>
+        {% endif %}
         </div>
     </div>
 </div>
