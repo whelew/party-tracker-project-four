@@ -49,8 +49,9 @@ def campaign_info(request, pk):
 
     """
     campaign = get_object_or_404(Campaign, pk=pk, user=request.user)
+    characters = campaign.characters.all() # Retrieve all characters linked to campaign id.
 
-    return render(request, 'campaign/campaign_info.html', {'campaign': campaign})    
+    return render(request, 'campaign/campaign_info.html', {'campaign' : campaign, 'characters' : characters})    
 
 @login_required
 def create_character(request, campaign_id):
