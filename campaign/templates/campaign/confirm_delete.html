@@ -1,3 +1,15 @@
 {% extends 'base.html' %} {% block content %}
 
+<div class="container-12-md">
+    <h1>Delete Campaign:</h1>
+    <p>Are you sure you want to delete <strong>{{ campaign.name }}</strong>?</p>
+    <p>Your Campaign will be lost forever.</p>
+
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Confirm Delete</button>
+        <a href="{% url 'campaign_list' %}" class="btn btn-info">Cancel Delete</a>
+    </form>
+</div>
+
 {% endblock content %}

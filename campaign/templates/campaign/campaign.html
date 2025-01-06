@@ -8,11 +8,12 @@
         <li>
             <a href="{% url 'campaign_info' campaign.id %}">{{ campaign.name }}</a>
             - {{ campaign.description }}
+            <a href="{% url 'delete_campaign' campaign.id %}">Delete Campaign</a>
         </li>
         {% endfor %}
     </ul>
 </div>
 <div class="container">
-    <a href="{% url 'create_campaign' %}">New Campaign</a>
+    <a href="{% url 'create_campaign' %}" class="btn btn-primary">Create New Campaign</a>
 </div>
 {% endblock content %}

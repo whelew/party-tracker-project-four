@@ -89,4 +89,4 @@ def delete_campaign(request, campaign_id):
         messages.success(request, f'{ campaign.name } has been deleted succesfully.')
         return redirect('campaign_list')
     
-    return render(request, 'campaign/confirm_delete', {'campaign' : campaign})
+    return render(request, 'campaign/confirm_delete.html', {'campaign' : campaign})
