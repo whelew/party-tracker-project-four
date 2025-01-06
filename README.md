@@ -11,6 +11,10 @@
 - [Views](#views)
 - [Forms](#forms)
 
+## [Bugs and Debugging](#bugs-and-debugging-1)
+
+- [Integrity Error](#integrity-error)
+
 ## Design
 
 ### Entity Relationship Diagram:
@@ -208,3 +212,51 @@ I will most likely change this at a later date.
 - It is directly tied to the Campaign model.
 - It is used in the create_campaign view to handle submissions for new campaigns.
 - Thanks to Django it will automatically send the new data to the database.
+
+### Bugs and Debugging
+
+#### Integrity Error
+
+- Example:
+
+IntegrityError at /accounts/signup/
+insert or update on table "account_emailaddress" violates foreign key constraint "account_emailaddress_user_id_2c513194_fk_user_user_id"
+DETAIL:  Key (user_id)=(25) is not present in table "user_user".
+
+##### Main Issue:
+
+The main issue with this error was my database was out of sync. I tried to manually fix it within my command line through commands such as:
+
+- python3 manage.py shell
+- python3 manage.py dbshell
+
+- I tried many different approaches to fix this error, however, none of the attempts i made to fix the issue worked. 
+- The database schema was correctly mapped however and I made sure all migrations were completed. 
+- Everytime a user created a new account this error would appear. The user email was not being correctly associated with the user id.
+- Users were not properly being created and saved to the user=user table which caused a foreign key violation when attempting to associate emails.
+- I tried to ensure manually that the users were being saved correctly to the user_user table.
+- Each I was presented with this error:
+- Error with user 1: insert or update on table "account_emailaddress" violates foreign key constraint "account_emailaddress_user_id_2c513194_fk_user_user_id"
+DETAIL:  Key (user_id)=(1) is not present in table "user_user".
+- I tried to flush my database but ran into issues due to using a database link.
+
+
+##### Main Solution:
+
+- To fix this issue, I decided to delete my old database. 
+- I first deleted the current link in my heroku DATABASE_URL and env.py file.
+- I then got a fresh new database and link from Code Institute. 
+- Using this new database link I changed both the heroku DATABASE_URL value and the one in my env.py file to the new value.
+- I ran migrations again with python3 manage.py migrate.
+- Created a new superuser.
+- Then tested the new database by creating a new user through the allauth signup form.
+- After testing no error was encountered and the integrity error was fixed.
+
+###### Conclusion:
+
+My inital thoughts on what caused the issue in the first place was due to my own fault. 
+When i first started the project i created a superuser and a test signup before properly implementing the allauth package.
+I believe this was the main cause of the error. 
+This would have caused the allauth migrations to be out of sync with the rest of the database resulting in allauth not being able to automatically handle the post request correctly.
+Thankfully this issue has now been resolved.
+
