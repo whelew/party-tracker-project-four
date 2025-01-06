@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'monster',
     'campaign',
+    'home',
 ]
 
 MIDDLEWARE = [
