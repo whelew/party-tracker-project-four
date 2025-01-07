@@ -17,3 +17,4 @@ def item_list(request):
         request, 'item/item_list.html',
         {'items': items},
     )
+
