@@ -214,6 +214,30 @@ Below are the relationships between each database model:
 - If False, the user will be redirected to the campaign_info page.
 - When the user sends the POST request to delete the character, the character with the specified character_id will be deleted.
 
+#### update_character_stat
+
+- This view allows a user to adjust their characters attributes. 
+- I took inspiration from how I programmed the delete_item view, which lets the user delete an item in the inventory without actually leaving the inventory page.
+- This view allows the user to increment their attributes by 1 or decrement them by 1.
+- The view requires a character_id, attribute and action arguement, using these arguements I can target specific attributes from a list within the view.
+- The character_id will allow us to target the correct character.
+- The attribute will be the specific attribute chosen.
+- If the action 'increment' will increment the chosen attribute.
+- If the action is 'decrement' will decrement the chosen attribute.
+- This view requires a template to have a way to send the view these arguements.
+- I used an anchor tag containing a django tag. Here is an example:
+{% url 'update_character_stat' character.id 'strength' 'increment' %}
+- This anchor tag is then placed within the same cell of the table as its relative attribute. In this case 'strength'.
+- character.id is the characters id, and because it is inside a for loop I can use character.id to fetch the id.
+- The 'strength' is the second argument refering to the attribute parameter.
+- The 'increment' is the last argument refering to the action parameter.
+- There is also another tag within the same cell however this will be targeting the 'decrement' action.
+- The view also uses a current_value, attributes in D&D can not go below 1 or above 20, therefore I made sure to put some validation in 
+using an if statement.
+- If the current_value of the selected attribute is 20, then it can not be incremented and if it is 1, it can not be decremented.
+- Lastly I had to make sure 'health' was seperate from the attributes in the if statement, as health should be and is allowed to go above 20.
+Health can currently go to any number.      
+
 #### home_page
 
 - This is a very basic view.
@@ -227,7 +251,7 @@ Below are the relationships between each database model:
 - This view is very similar to the monster_library view.
 - It gets all item objects within the Item model.
 - It returns all items within that model.
-- It then renders the item_list.html where the <table> will be populated with all item objects.
+- It then renders the item_list.html where the table tag will be populated with all item objects.
 
 #### add_item_to_inventory
 
