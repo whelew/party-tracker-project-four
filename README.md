@@ -245,6 +245,18 @@ Therefore using a redirect was a much safer option to avoid duplications.
 - Combining both dispalying the inventory and adding items to the inventory helps keep the 
 functionality kept in once place allowing users to view and edit their inventories from the same place.
 
+#### delete_item
+
+- This view allows a user to delete an item from their inventory.
+- Unlike delete_character and delete_campaign, delete_item will not render a new template.
+This was a concious decision as deleting an item is far less important than deleting a character or campaign.
+- The user would find the task of deleting an item out of their inventory quite tedious after the first 3 times 
+if the delete button redirected you to a different web page everytime.
+- Therefore the view only redirects the user to the character_inventory page after the delete button has been clicked.
+- I set up the delete button on the character_inventory template. It uses {% url 'delete_item' inventory_item.id %} as an action.
+- This then uses the url path I set up for the view. Where the view will delete the specific item based on it id if the request.method == 'POST'.
+- The user is then redirected to the page they are currently on allowing for a quick and easy removal of unwanted items.
+
 ### Forms
 
 Django Forms is a useful tool to handle user input. During my research I found that if I used a form.py it would allow me to validate data from user
