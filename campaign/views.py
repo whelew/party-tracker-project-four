@@ -69,7 +69,7 @@ def create_character(request, campaign_id):
             character.save()
             return redirect('campaign_info', pk=campaign_id) 
     else:
-        form = CharacterForm(user=request.user)
+        form = CharacterForm()
     
     return render(request, 'campaign/create_character.html', {'form' : form, 'campaign' : campaign})
 

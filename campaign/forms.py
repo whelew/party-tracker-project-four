@@ -12,13 +12,8 @@ class CharacterForm(forms.ModelForm):
         model = Character
         fields = [
             'name', 'character_class', 'health', 'strength', 'dexterity', 
-            'constitution', 'intelligence', 'wisdom', 'charisma', 'campaign',
+            'constitution', 'intelligence', 'wisdom', 'charisma',
         ]
     
     def __init__(self, *args, **kwargs):
-        # Capture user instance passed from the view
-        user = kwargs.pop('user', None)
         super().__init__(*args, **kwargs)
-        # Filter campaigns only belonging to loggedin user
-        if user:
-            self.fields['campaign'].queryset = Campaign.objects.filter(user=user)
