@@ -1,0 +1,27 @@
+{% extends 'base.html' %} {% block content %}
+{% load static %}
+
+<h1 class="display-1 text-center">Item List</h1>
+
+<div class="container grid text-center">
+    <table class="table table-bordered table-striped table-arcane">
+        <thead>
+          <tr>
+            <th scope="col">Item</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for item in items %}
+            <tr>
+              <td>{{ item.name }}</td>
+              <td>{{ item.description }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+</div>
+
+{% endblock content %}
+
+</html>
