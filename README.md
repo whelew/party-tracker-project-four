@@ -334,3 +334,36 @@ Thankfully this issue has now been resolved.
 
 #### Circular Import
 
+
+- Example:
+
+- from campaign.models import Character
+- ImportError: cannot import name 'Character' from partially initialized module 'campaign.models' 
+(most likely due to a circular import) (/workspace/party-tracker-project-four/campaign/models.py)
+
+##### Main Issue
+
+This error occured because:
+
+- campaign.models imported Inventory from the item app.
+- item.models imported Character from the campaign app.
+- This resulted in a circular import error, where each model required the other file to be fully loaded first.
+This was not possible as python doesn't allow circular dependencies. 
+
+##### Main Solution
+
+The easiest fix for this bug was removing one of the imports from the other.
+
+- Instead of directly import Character into the item.models, I instead used a string method calling 'campaign.Character'.
+- This allowed Django to resolve the circular import at runtime.
+- My database schema didn't change structure, so no migrations were needed.
+- I did run makemigrations and migrate to ensure this was correct. 
+- When these commands were used no migrations were made.
+
+##### Conclusion
+
+This was a relatively easy bug to fix, having DEBUG set to True quickly helped me identify the error as a circular import.
+Resolving the issue with using a string method instead of importing the Character model was a lot more efficient and fixed the error straight away.
+Although I created ERD's to help with model creation, in the future I will have to be more prepared with how my models will interact with one another.
+Keeping this lesson in mind will help me avoid errors such as this. 
+
