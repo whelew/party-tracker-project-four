@@ -7,4 +7,5 @@ urlpatterns = [
     path('<int:pk>/', views.campaign_info, name='campaign_info'),
     path('<int:campaign_id>/create_character/', views.create_character, name='create_character'),
     path('<int:campaign_id>/confirm_delete/', views.delete_campaign, name='delete_campaign'),
+    path('character/<int:character_id>/confirm_delete_character/', views.delete_character, name='delete_character'),
 ]
