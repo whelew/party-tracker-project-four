@@ -119,12 +119,15 @@ def update_character_stat(request, character_id, attribute, action):
     character = get_object_or_404(Character, id=character_id, campaign__user=request.user)
 
     valid_attributes = ['health', 'strength', 'dexterity', 'constitution', 'intelligence', 'wisdom', 'charisma']
+    
 
     if attribute not in valid_attributes:
         return redirect('campaign info', pk=character.campaign.id)
 
     current_value = getattr(character, attribute)
     if action == 'increment' and current_value < 20:
+        setattr(character, attribute, current_value + 1)
+    elif action == 'increment' and attribute == 'health':
         setattr(character, attribute, current_value + 1)
     elif action == 'decrement' and current_value > 1:
         setattr(character, attribute, current_value - 1)

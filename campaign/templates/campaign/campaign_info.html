@@ -38,12 +38,36 @@
                         <a href="{% url 'update_character_stat' character.id 'health' 'increment' %}" class="btn btn-sm">+</a>
                         <a href="{% url 'update_character_stat' character.id 'health' 'decrement' %}" class="btn btn-sm">-</a>
                     </td>
-                    <td>{{ character.strength }}</td>
-                    <td>{{ character.dexterity }}</td>
-                    <td>{{ character.constitution }}</td>
-                    <td>{{ character.intelligence }}</td>
-                    <td>{{ character.wisdom }}</td>
-                    <td>{{ character.charisma }}</td>
+                    <td>
+                        {{ character.strength }}
+                        <a href="{% url 'update_character_stat' character.id 'strength' 'increment' %}" class="btn btn-sm">+</a>
+                        <a href="{% url 'update_character_stat' character.id 'strength' 'decrement' %}" class="btn btn-sm">-</a>
+                    </td>
+                    <td>
+                        {{ character.dexterity }}
+                        <a href="{% url 'update_character_stat' character.id 'dexterity' 'increment' %}" class="btn btn-sm">+</a>
+                        <a href="{% url 'update_character_stat' character.id 'dexterity' 'decrement' %}" class="btn btn-sm">-</a>
+                    </td>
+                    <td>
+                        {{ character.constitution }}
+                        <a href="{% url 'update_character_stat' character.id 'constitution' 'increment' %}" class="btn btn-sm">+</a>
+                        <a href="{% url 'update_character_stat' character.id 'constitution' 'decrement' %}" class="btn btn-sm">-</a>
+                    </td>
+                    <td>
+                        {{ character.intelligence }}
+                        <a href="{% url 'update_character_stat' character.id 'intelligence' 'increment' %}" class="btn btn-sm">+</a>
+                        <a href="{% url 'update_character_stat' character.id 'intelligence' 'decrement' %}" class="btn btn-sm">-</a>
+                    </td>
+                    <td>
+                        {{ character.wisdom }}
+                        <a href="{% url 'update_character_stat' character.id 'wisdom' 'increment' %}" class="btn btn-sm">+</a>
+                        <a href="{% url 'update_character_stat' character.id 'wisdom' 'decrement' %}" class="btn btn-sm">-</a>
+                    </td>
+                    <td>
+                        {{ character.charisma }}
+                        <a href="{% url 'update_character_stat' character.id 'charisma' 'increment' %}" class="btn btn-sm">+</a>
+                        <a href="{% url 'update_character_stat' character.id 'charisma' 'decrement' %}" class="btn btn-sm">-</a>
+                    </td>
                     <td>
                         <a href="{% url 'add_item_to_inventory' character.id %}" class="btn btn-primary">Inventory</a>
                     </td>
