@@ -90,3 +90,16 @@ def delete_campaign(request, campaign_id):
         return redirect('campaign_list')
     
     return render(request, 'campaign/confirm_delete.html', {'campaign' : campaign})
+
+@login_required
+def delete_character(request, character_id):
+    """
+    Allow a user to delete a character from a campaign
+    """
+    character = get_object_or_404(Character, id=character_id, user=request.user)
+
+    if request.method == 'POST':
+        character.delete()
+        return redirect('campaign_info', pk=character.campaign.id)
+    
+    return render(request, 'campaign/confirm_delete_character.html', {'character' : character})
