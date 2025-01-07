@@ -96,7 +96,7 @@ def delete_character(request, character_id):
     """
     Allow a user to delete a character from a campaign
     """
-    character = get_object_or_404(Character, id=character_id, user=request.user)
+    character = get_object_or_404(Character, id=character_id, campaign__user=request.user)
 
     if request.method == 'POST':
         character.delete()

@@ -23,6 +23,7 @@
                     <th>Wis</th>
                     <th>Cha</th>
                     <th>Inventory</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -40,6 +41,7 @@
                     <td>
                         <a href="{% url 'add_item_to_inventory' character.id %}" class="btn btn-primary">Inventory</a>
                     </td>
+                    <td><a href="{% url 'delete_character' character.id %}" class="btn">Delete Character</a></td>
                 </tr>
                 {% endfor %}
                 <tr>
