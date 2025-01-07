@@ -57,6 +57,7 @@ def add_item_to_inventory(request, character_id):
         else:
             form = AddItemForm()
         
+        # Render the form alongside inventory and current inventory items.
         return render(request, 'inventory/character_inventory.html', {
             'form' : form, 
             'inventory' : inventory,

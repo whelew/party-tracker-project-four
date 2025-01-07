@@ -1,6 +1,33 @@
 {% extends 'base.html' %} {% block content %}
 
 <div class="container">
+    <h1>{{ inventory.character.name }}'s Inventory</h1>
+    <div class="row">
+        <div class="col">
+            <table class="table table-striped table-bordered table-arcane">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in inventory_items %}
+                    <tr>
+                        <td>{{ item.name }}</td>
+                        <td>{{ item.quantity }}</td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td colspan="2">No Items In Inventory</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
     <div class="row">
         <div class="col">
             <h1>Add Item</h1>
@@ -9,6 +36,11 @@
                 {{ form.as_p }}
                 <button class="btn btn-primary">Add Item</button>
             </form>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
             <a href="{% url 'campaign_info' inventory.character.campaign_id  %}" class="btn btn-primary">Return To Campaign</a>
         </div>
     </div>
