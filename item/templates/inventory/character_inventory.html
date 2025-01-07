@@ -12,10 +12,10 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {% for item in inventory_items %}
+                    {% for inventory_item in inventory_items %}
                     <tr>
-                        <td>{{ item.name }}</td>
-                        <td>{{ item.quantity }}</td>
+                        <td>{{ inventory_item.item.name }}</td>
+                        <td>{{ inventory_item.quantity }}</td>
                     </tr>
                     {% empty %}
                     <tr>

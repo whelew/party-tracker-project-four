@@ -52,7 +52,7 @@ def add_item_to_inventory(request, character_id):
                 inventory_item.save()
             
             # Refresh form after adding item.
-            form = AddItemForm()
+            return redirect('add_item_to_inventory', character_id=character_id)
         
     else:
         form = AddItemForm()
