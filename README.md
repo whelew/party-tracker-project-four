@@ -14,6 +14,7 @@
 ## [Bugs and Debugging](#bugs-and-debugging-1)
 
 - [Integrity Error](#integrity-error)
+- [Circular Import Error](#circular-import)
 
 ## Design
 
@@ -179,11 +180,21 @@ Below are the relationships between each database model:
 - It also uses @login_required to ensure only authenticated users can create a new instance of Campaign.
 - After a new campaign is created the user is redirected back to campaign.html through the campaign_list view.
 
+#### delete_campaign
+
 #### campaign_info
 
 - This view is to allow the user to load an individual campaign to see it in more detail.
 - In a future implementation it will display all characters and items assosicated with that campaign.
 - It also requires an authenticated user through @login_required.
+
+#### create_character
+
+#### home_page
+
+#### item_list
+
+#### add_item_to_inventory
 
 ### Forms
 
@@ -212,6 +223,10 @@ I will most likely change this at a later date.
 - It is directly tied to the Campaign model.
 - It is used in the create_campaign view to handle submissions for new campaigns.
 - Thanks to Django it will automatically send the new data to the database.
+
+#### CharacterForm
+
+#### AddItemForm
 
 ### Bugs and Debugging
 
@@ -259,4 +274,6 @@ When i first started the project i created a superuser and a test signup before 
 I believe this was the main cause of the error. 
 This would have caused the allauth migrations to be out of sync with the rest of the database resulting in allauth not being able to automatically handle the post request correctly.
 Thankfully this issue has now been resolved.
+
+#### Circular Import
 

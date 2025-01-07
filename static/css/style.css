@@ -23,6 +23,12 @@ h1, th {
     padding: 1rem;
 }
 
+/* Button Styling */
+
+.btn {
+    background-color: #271c03;
+    color: #e7c4ac;
+}
 
 /* home_page css */
 
