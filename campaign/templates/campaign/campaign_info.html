@@ -29,9 +29,15 @@
             <tbody>
                 {% for character in characters %}
                 <tr>
-                    <td>{{ character.name }}</td>
+                    <td>
+                        {{ character.name }}
+                    </td>
                     <td>{{ character.character_class }}</td>
-                    <td>{{ character.health }}</td>
+                    <td>
+                        {{ character.health }}
+                        <a href="{% url 'update_character_stat' character.id 'health' 'increment' %}" class="btn btn-sm">+</a>
+                        <a href="{% url 'update_character_stat' character.id 'health' 'decrement' %}" class="btn btn-sm">-</a>
+                    </td>
                     <td>{{ character.strength }}</td>
                     <td>{{ character.dexterity }}</td>
                     <td>{{ character.constitution }}</td>

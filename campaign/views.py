@@ -5,6 +5,8 @@ from .models import Campaign, Character
 from .forms import CampaignForm, CharacterForm
 
 # Create your views here.
+
+
 @login_required
 def campaign_list(request):
     """
@@ -42,6 +44,7 @@ def create_campaign(request):
     
     return render(request, 'campaign/create_campaign.html', {'form': form})
 
+
 @login_required
 def campaign_info(request, pk):
     """
@@ -53,6 +56,7 @@ def campaign_info(request, pk):
     characters = campaign.characters.all() # Retrieve all characters linked to campaign id.
 
     return render(request, 'campaign/campaign_info.html', {'campaign' : campaign, 'characters' : characters})    
+
 
 @login_required
 def create_character(request, campaign_id):
@@ -91,6 +95,7 @@ def delete_campaign(request, campaign_id):
     
     return render(request, 'campaign/confirm_delete.html', {'campaign' : campaign})
 
+
 @login_required
 def delete_character(request, character_id):
     """
@@ -103,3 +108,26 @@ def delete_character(request, character_id):
         return redirect('campaign_info', pk=character.campaign.id)
     
     return render(request, 'campaign/confirm_delete_character.html', {'character' : character})
+
+
+@login_required
+def update_character_stat(request, character_id, attribute, action):
+    """
+    Allow user to adjust characters stats in increments of +1 or -1
+    """
+
+    character = get_object_or_404(Character, id=character_id, campaign__user=request.user)
+
+    valid_attributes = ['health', 'strength', 'dexterity', 'constitution', 'intelligence', 'wisdom', 'charisma']
+
+    if attribute not in valid_attributes:
+        return redirect('campaign info', pk=character.campaign.id)
+
+    current_value = getattr(character, attribute)
+    if action == 'increment' and current_value < 20:
+        setattr(character, attribute, current_value + 1)
+    elif action == 'decrement' and current_value > 1:
+        setattr(character, attribute, current_value - 1)
+    character.save()
+
+    return redirect('campaign_info', pk=character.campaign.id)
