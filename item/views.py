@@ -64,4 +64,19 @@ def add_item_to_inventory(request, character_id):
             'inventory' : inventory,
             'inventory_items' : inventory_items,
             })
-    
+
+
+@login_required
+def delete_item(request, inventory_item_id):
+    """
+    Allow a user to delete an item from their inventory.
+    """
+    inventory_item = get_object_or_404(
+        InventoryItem,
+        id=inventory_item_id,
+        inventory__character__campaign__user=request.user
+    )
+
+    if request.method == 'POST':
+        inventory_item.delete()
+        return redirect('add_item_to_inventory', character_id=inventory_item.inventory.character.id)
