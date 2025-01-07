@@ -24,9 +24,9 @@ def add_item_to_inventory(request, character_id):
     """
     Add item to specific character invetory using character id to match correct character inventory
     """
-    
+
     # Retrieve inventory belonging to specific character.
-    inventory = get_object_or_404(Inventory, character_id=character_id, character_user=request.user)
+    inventory = get_object_or_404(Inventory, character__id=character_id, character__campaign__user=request.user)
 
     # Retrieve exsisting items in characters inventory.
     inventory_items = inventory.inventory_items.select_related('item')
@@ -54,13 +54,14 @@ def add_item_to_inventory(request, character_id):
             # Refresh form after adding item.
             form = AddItemForm()
         
-        else:
-            form = AddItemForm()
+    else:
+        form = AddItemForm()
         
+
         # Render the form alongside inventory and current inventory items.
         return render(request, 'inventory/character_inventory.html', {
             'form' : form, 
             'inventory' : inventory,
-            'invetory_items' : inventory_items,
+            'inventory_items' : inventory_items,
             })
     

@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth import get_user_model
 from django.core.validators import MinValueValidator, MaxValueValidator
+from item.models import Inventory
 
 # Create your models here.
 
@@ -49,8 +50,18 @@ class Character(models.Model):
     charisma = models.IntegerField(default=10, validators=SET_STAT)
     campaign = models.ForeignKey(Campaign, on_delete=models.CASCADE, related_name='characters')
 
+
     class Meta:
         ordering = ['name']
     
+
+    def save(self, *args, **kwargs):
+        """
+        Creates inventory when character is saved.
+        """
+        super().save(*args, **kwargs) 
+        Inventory.objects.get_or_create(character=self)
+    
+
     def __str__(self):
         return self.name
