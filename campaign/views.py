@@ -62,7 +62,7 @@ def create_character(request, campaign_id):
     campaign = get_object_or_404(Campaign, id=campaign_id, user=request.user)
 
     if request.method == 'POST':
-        form = CharacterForm(request.POST, user=request.user)
+        form = CharacterForm(request.POST)
         if form.is_valid():
             character = form.save(commit=False)
             character.campaign = campaign # link the character to campaign/id
