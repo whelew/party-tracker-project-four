@@ -280,6 +280,11 @@ character health and stats based on what class type the user selects.
 
 #### AddItemForm
 
+- This form allows users add items to their inventory.
+- It will create a Item field and a Quantity field for the user to select from.
+- It uses a querset to retrieve all items in the Item database, this will allow users to select from the item list.
+- The intfield uses a min_value=1, this ensures the users can't add an item of quantity 0.
+
 ### Bugs and Debugging
 
 #### Integrity Error
