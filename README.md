@@ -425,4 +425,5 @@ then customise later with my own css style sheet.
 7. [Google Fonts](https://fonts.google.com/) for helping choose an appropriate typography for my website.
 8. [Slack](https://app.slack.com/) provided useful when also researching issues and bugs as I was able to look at other students projects and see how they fixed previous similar issues.
 9. [Pixabay](https://pixabay.com/) is a great website to find free images to use for your website.
-10. I would also like to thank my mentor Luke for his insight and support during this project.
+10. [Favicon](https://favicon.io/) was used to create and generate a free favicon for my website.
+11. I would also like to thank my mentor Luke for his insight and support during this project.
