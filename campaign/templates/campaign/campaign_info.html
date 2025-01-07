@@ -22,6 +22,7 @@
                     <th>Int</th>
                     <th>Wis</th>
                     <th>Cha</th>
+                    <th>Inventory</th>
                 </tr>
             </thead>
             <tbody>
@@ -36,6 +37,9 @@
                     <td>{{ character.intelligence }}</td>
                     <td>{{ character.wisdom }}</td>
                     <td>{{ character.charisma }}</td>
+                    <td>
+                        <a href="{% url 'add_item_to_inventory' character.id %}" class="btn btn-primary">Inventory</a>
+                    </td>
                 </tr>
                 {% endfor %}
                 <tr>
