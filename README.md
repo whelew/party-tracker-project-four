@@ -206,6 +206,14 @@ Below are the relationships between each database model:
 - Once the character is created the character will be linked to the campaign and saved to the database and the user will be redirected to the campaign_info page.
 - It uses @login_required which ensures that only authenticated users can add or modify characters. 
 
+#### delete_character
+
+- This view allows the user to delete a previously made character within their campaign.
+- It renders the confirm_delete_character.html template to double check the user wishes to delete the character.
+- If True, the character will be deleted from the database and campaign.
+- If False, the user will be redirected to the campaign_info page.
+- When the user sends the POST request to delete the character, the character with the specified character_id will be deleted.
+
 #### home_page
 
 - This is a very basic view.
