@@ -214,7 +214,26 @@ Below are the relationships between each database model:
 
 #### item_list
 
+- This view is very similar to the monster_library view.
+- It gets all item objects within the Item model.
+- It returns all items within that model.
+- It then renders the item_list.html where the <table> will be populated with all item objects.
+
 #### add_item_to_inventory
+
+- This view became very complicated.
+- It was initally designed to add an item to an inventory.
+- After first setting up the view to perform this function, because it rendered the character_inventory.html template.
+I thought it was appropriate to make the view both add items to the user's character's inventory and also display the current inventory.
+- The view begins by first retrieving the inventory associated with the specific character using character_id provided in the url.
+- This ensures the inventory belongs to that character. I had an error with [Circular Imports](#circular-import) when programming this which I explain in the debugging section.
+- If request.method == POST, the view processes the AddItemForm. It checks if the form is valid. 
+- If it is, the view will either create a new InventoryItem or update the current quantity of items.
+- If request.method == GET it will simply render an empty AddItemForm() and all items currently in the Inventory will be displayed.
+- A useful feature that I added was the redirect, I orignally had it as form = AddItemForm() but doing it like this would have caused items to be duplicated once the page was refreshed.
+Therefore using a redirect was a much safer option to avoid duplications.
+- Combining both dispalying the inventory and adding items to the inventory helps keep the 
+functionality kept in once place allowing users to view and edit their inventories from the same place.
 
 ### Forms
 
