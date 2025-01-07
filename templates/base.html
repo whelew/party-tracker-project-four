@@ -40,7 +40,7 @@
                 <div class="navbar-nav">
                     <a class="nav-link" href="{% url 'home_page' %}">Home</a>
                     <a class="nav-link" href="/campaign">Campaigns</a>
-                    <a class="nav-link" href="/admin">Item List</a>
+                    <a class="nav-link" href="/item">Item List</a>
                     <a class="nav-link" href="/monster">Monster Library</a>
                     {% if user.is_authenticated %}
                     <a class="nav-link {% if request.path == logout_url %}active{% endif %}"

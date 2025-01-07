@@ -12,6 +12,8 @@ h1, th {
     font-family: "Uncial Antiqua", serif;
     font-weight: 400;
     font-style: normal;
+    margin: 2px;
+    padding: 2px;
 }
 
 .container {

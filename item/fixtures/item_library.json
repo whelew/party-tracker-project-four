@@ -1,0 +1,405 @@
+[
+    {
+        "model": "item.Item",
+        "pk": 1,
+        "fields": {
+            "name": "Potion of Healing",
+            "description": "A small vial containing a bright red liquid that restores health when consumed. Don't mix them up."
+        }
+    },
+    {
+        "model": "item.Item",
+        "pk": 2,
+        "fields": {
+            "name": "Longsword",
+            "description": "A versatile melee weapon commonly used by fighters and paladins."
+        }
+    },
+    {
+        "model": "item.Item",
+        "pk": 3,
+        "fields": {
+            "name": "Shield",
+            "description": "A sturdy circular item for defence that increases your AC by 2."
+        }
+    },
+    {
+        "model": "item.Item",
+        "pk": 4,
+        "fields": {
+            "name": "Rope, 50 feet",
+            "description": "A sturdy rope made of hemp, essential for climbing and adventuring. It does actually run out eventually."
+        }
+    },
+    {
+        "model": "item.Item",
+        "pk": 5,
+        "fields": {
+            "name": "Torches",
+            "description": "Basic wooden torches used to illuminate dark areas. Good for burning things too."
+        }
+    },
+    {
+        "model": "item.Item",
+        "pk": 6,
+        "fields": {
+            "name": "Bag of Holding",
+            "description": "A magical bag capable of holding much more than it appears. I wonder what would happen if you step inside the bag."
+        }
+    },
+    {
+        "model": "item.Item",
+        "pk": 7,
+        "fields": {
+            "name": "Spellbook",
+            "description": "A tome used by wizards to record their spells. Don't lose it or you won't be able to remember anything."
+        }
+    },
+    {
+        "model": "item.Item",
+        "pk": 8,
+        "fields": {
+            "name": "Dagger",
+            "description": "A small sharp blade which can be easily concealed."
+        }
+    },
+    {
+        "model": "item.Item",
+        "pk": 9,
+        "fields": {
+            "name": "Magic Wand",
+            "description": "A wand used by spellcasters to channel their magic. I'm a what..."
+        }
+    },
+    {
+        "model": "item.Item",
+        "pk": 10,
+        "fields": {
+            "name": "Rations",
+            "description": "Preserved food that lasts for weeks, essential for long journeys."
+        }
+    },
+    {
+        "model": "item.Item",
+        "pk": 11,
+        "fields": {
+            "name": "Lantern",
+            "description": "A hooded lantern that provides light in a wide radius. When there is rain, a torch is no help."
+        }
+    },
+    {
+        "model": "item.Item",
+        "pk": 12,
+        "fields": {
+            "name": "Leather Armor",
+            "description": "Light armor made of hardened leather. It keeps you protected and nimble all at once."
+        }
+    },
+    {
+        "model": "item.Item",
+        "pk": 13,
+        "fields": {
+            "name": "Studded Leather Armor",
+            "description": "Light armor reinforced with metal studs for extra protection."
+        }
+    },
+    {
+        "model": "item.Item",
+        "pk": 14,
+        "fields": {
+            "name": "Chainmail",
+            "description": "Heavy armor made of interlocking metal rings. No blade will pierce it."
+        }
+    },
+    {
+        "model": "item.Item",
+        "pk": 15,
+        "fields": {
+            "name": "Greatsword",
+            "description": "A massive two-handed sword that deals devastating damage."
+        }
+    },
+    {
+        "model": "item.Item",
+        "pk": 16,
+        "fields": {
+            "name": "Mace",
+            "description": "A blunt weapon which is ideal for clerics and smashing skulls."
+        }
+    },
+    {
+        "model": "item.Item",
+        "pk": 17,
+        "fields": {
+            "name": "Crossbow",
+            "description": "A ranged weapon that fires bolts. Takes a while to reload though."
+        }
+    },
+    {
+        "model": "item.Item",
+        "pk": 18,
+        "fields": {
+            "name": "Arrows (20)",
+            "description": "A bundle of 20 arrows for use with a bow. Remember it isn't a bolt, the same but different."
+        }
+    },
+    {
+        "model": "item.Item",
+        "pk": 19,
+        "fields": {
+            "name": "Healing Kit",
+            "description": "A kit containing bandages and salves for stabilizing wounds. Sure to come in handy when in a pickle."
+        }
+    },
+    {
+        "model": "item.Item",
+        "pk": 20,
+        "fields": {
+            "name": "Ring of Protection",
+            "description": "A magical ring that increases the wearer's AC by 2."
+        }
+    },
+    {
+        "model": "item.Item",
+        "pk": 21,
+        "fields": {
+            "name": "Enchanted Cloak",
+            "description": "A cloak imbued with protective magic. It will increase AC by 2"
+        }
+    },
+    {
+        "model": "item.Item",
+        "pk": 22,
+        "fields": {
+            "name": "Boots of Speed",
+            "description": "Magical boots that increase the wearer's movement speed. A most useful item."
+        }
+    },
+    {
+        "model": "item.Item",
+        "pk": 23,
+        "fields": {
+            "name": "Alchemist's Supplies",
+            "description": "Tools used to create potions and chemicals. It's no philosopher's stone."
+        }
+    },
+    {
+        "model": "item.Item",
+        "pk": 24,
+        "fields": {
+            "name": "Scroll of Fireball",
+            "description": "A magical scroll containing the Fireball spell. Deadly but useful, don't stand too close."
+        }
+    },
+    {
+        "model": "item.Item",
+        "pk": 25,
+        "fields": {
+            "name": "Potion of Invisibility",
+            "description": "A potion that renders the drinker invisible for a short time. The label reads, 'Should be used for noble acts only'."
+        }
+    },
+    {
+        "model": "item.Item",
+        "pk": 26,
+        "fields": {
+            "name": "Gemstone",
+            "description": "A valuable gemstone often used as currency or in magical rituals."
+        }
+    },
+    {
+        "model": "item.Item",
+        "pk": 27,
+        "fields": {
+            "name": "Map of the Region",
+            "description": "A detailed map showing the surrounding areas. Please don't put it next to coffee."
+        }
+    },
+    {
+        "model": "item.Item",
+        "pk": 28,
+        "fields": {
+            "name": "Wand of Magic Missiles",
+            "description": "A magical wand that can cast Magic Missile."
+        }
+    },
+    {
+        "model": "item.Item",
+        "pk": 29,
+        "fields": {
+            "name": "Ring of Water Walking",
+            "description": "A magical ring that allows the wearer to walk on water. Walk on water they said, and so they did."
+        }
+    },
+    {
+        "model": "item.Item",
+        "pk": 30,
+        "fields": {
+            "name": "Bag of Sand",
+            "description": "A small bag of sand used for various purposes. You could always chuck it in someones eyes."
+        }
+    }
+]
+
+[
+    {
+        "model": "item.Item",
+        "pk": 31,
+        "fields": {
+            "name": "Lantern of Revealing",
+            "description": "A magical lantern that reveals invisible creatures and objects. Check every nook and cranny."
+        }
+    },
+    {
+        "model": "item.Item",
+        "pk": 32,
+        "fields": {
+            "name": "Portable Hole",
+            "description": "A magical piece of cloth that creates an extradimensional storage space."
+        }
+    },
+    {
+        "model": "item.Item",
+        "pk": 33,
+        "fields": {
+            "name": "Iron Spikes (10)",
+            "description": "Sturdy spikes used for climbing or securing structures."
+        }
+    },
+    {
+        "model": "item.Item",
+        "pk": 34,
+        "fields": {
+            "name": "Herbalism Kit",
+            "description": "A kit containing tools and ingredients for creating herbal remedies."
+        }
+    },
+    {
+        "model": "item.Item",
+        "pk": 35,
+        "fields": {
+            "name": "Mirror, Small Steel",
+            "description": "A small polished steel mirror useful for seeing around corners."
+        }
+    },
+    {
+        "model": "item.Item",
+        "pk": 36,
+        "fields": {
+            "name": "Driftglobe",
+            "description": "A magical globe that emits light and can float. It's not a ghost."
+        }
+    },
+    {
+        "model": "item.Item",
+        "pk": 37,
+        "fields": {
+            "name": "Ring of Feather Falling",
+            "description": "A magical ring that slows the wearer's descent. If your friend jumps off a cliff would you follow? Uhmm..."
+        }
+    },
+    {
+        "model": "item.Item",
+        "pk": 38,
+        "fields": {
+            "name": "Potion of Giant Strength",
+            "description": "A potion that temporarily grants the strength of a giant. Be careful, it will stop working at some point."
+        }
+    },
+    {
+        "model": "item.Item",
+        "pk": 39,
+        "fields": {
+            "name": "Quarterstaff",
+            "description": "A wooden staff often used by monks and wizards. You will always see a Halfing with this when going for a stroll."
+        }
+    },
+    {
+        "model": "item.Item",
+        "pk": 40,
+        "fields": {
+            "name": "Ring of Spell Storing",
+            "description": "A magical ring that can store and release spells."
+        }
+    },
+    {
+        "model": "item.Item",
+        "pk": 41,
+        "fields": {
+            "name": "Cloak of Elvenkind",
+            "description": "A cloak that enhances stealth and conceals the wearer. Almost like an invisiblity cloak, but not quite."
+        }
+    },
+    {
+        "model": "item.Item",
+        "pk": 42,
+        "fields": {
+            "name": "Boots of the Winterlands",
+            "description": "Magical boots that protect against cold weather. Keep them toes nice and toasty."
+        }
+    },
+    {
+        "model": "item.Item",
+        "pk": 43,
+        "fields": {
+            "name": "Alchemy Jug",
+            "description": "A magical jug that produces various liquids on command."
+        }
+    },
+    {
+        "model": "item.Item",
+        "pk": 44,
+        "fields": {
+            "name": "Spyglass",
+            "description": "A telescope used for observing distant objects. Eye spy with my little eye."
+        }
+    },
+    {
+        "model": "item.Item",
+        "pk": 45,
+        "fields": {
+            "name": "Ring of Evasion",
+            "description": "A magical ring that allows the wearer to evade danger. Not literally, but you will find dodging a lot easier."
+        }
+    },
+    {
+        "model": "item.Item",
+        "pk": 46,
+        "fields": {
+            "name": "Bag of Tricks",
+            "description": "A magical bag that produces random creatures to assist you. It could be a mighty lion, most likely a little rat though."
+        }
+    },
+    {
+        "model": "item.Item",
+        "pk": 47,
+        "fields": {
+            "name": "Horn of Blasting",
+            "description": "A magical horn that creates a powerful blast when blown."
+        }
+    },
+    {
+        "model": "item.Item",
+        "pk": 48,
+        "fields": {
+            "name": "Amulet of Health",
+            "description": "A magical amulet that increases the wearer's Constitution score."
+        }
+    },
+    {
+        "model": "item.Item",
+        "pk": 49,
+        "fields": {
+            "name": "Pearl of Power",
+            "description": "A magical pearl that restores spell slots to spellcasters."
+        }
+    },
+    {
+        "model": "item.Item",
+        "pk": 50,
+        "fields": {
+            "name": "Rod of the Pact Keeper",
+            "description": "A magical rod that enhances a warlock's spellcasting abilities."
+        }
+    }
+]
