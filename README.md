@@ -182,6 +182,13 @@ Below are the relationships between each database model:
 
 #### delete_campaign
 
+- This view allows a user to delete a prexisting campaign from their campaign list.
+- When the user sends the POST request to delete the campaign, the campaign with the specified campaign_id will be deleted.
+- It does this using campaign = get_object_or_404(Campaign, id=campaign_id, user=request.user)
+- The message is yet to be set up correctly to let the user know they successfully deleted the campaign.
+- This will be a future implementation.
+- It uses @login_required which ensures that only authenticated users can delete campaigns. 
+
 #### campaign_info
 
 - This view is to allow the user to load an individual campaign to see it in more detail.
@@ -190,7 +197,20 @@ Below are the relationships between each database model:
 
 #### create_character
 
+- This view allows the user to create a character within a campaign.
+- It renders the create_character.html template.
+- It uses CharacterForm from the forms.py to generate the fields for the user to use as inputs for their character.
+- It uses campaign = get_object_or_404(Campaign, id=campaign_id, user=request.user) verifies the current campaign belongs to the logged in user.
+- Once the character is created the character will be linked to the campaign and saved to the database and the user will be redirected to the campaign_info page.
+- It uses @login_required which ensures that only authenticated users can add or modify characters. 
+
 #### home_page
+
+- This is a very basic view.
+- It was designed with the intention that when the url path is empty for example path(''), the user will be directed towards the homepage.
+- It simply renders the home.html template.
+- Within this tempalte users are able to login or signup if they are not currently.
+- When the user is logged in 3 buttons will appear, campaigns, monster library and logout.
 
 #### item_list
 
