@@ -16,6 +16,8 @@
 - [Integrity Error](#integrity-error)
 - [Circular Import Error](#circular-import)
 
+## [Credits](#credits-1)
+
 ## Design
 
 ### Entity Relationship Diagram:
@@ -367,3 +369,16 @@ Resolving the issue with using a string method instead of importing the Characte
 Although I created ERD's to help with model creation, in the future I will have to be more prepared with how my models will interact with one another.
 Keeping this lesson in mind will help me avoid errors such as this. 
 
+## Credits
+
+1. [Django Documentation](https://docs.djangoproject.com/) was very useful in helping me understand and implement my models, views, forms and templates.
+2. [Python Documentation](https://docs.python.org/) was helpful when handling custom logic in my models and views. It is a useful reference for when you are working with Python.
+3. [Bootstrap Documentation](https://getbootstrap.com/docs/) was very helpful when structuring and styling my website. It allowed me to create a simply designed website which i could
+then customise later with my own css style sheet.
+4. [Stack Overflow](https://stackoverflow.com/) when troubleshooting coding issues and errors.
+5. [W3Schools](https://www.w3schools.com/) is a helpful guide when after quick references.
+6. [Django AllAuth Documentation](https://django-allauth.readthedocs.io/) when setting up the allauth user system.
+7. [Google Fonts](https://fonts.google.com/) for helping choose an appropriate typography for my website.
+8. [Slack](https://app.slack.com/) provided useful when also researching issues and bugs as I was able to look at other students projects and see how they fixed previous similar issues.
+9. [Pixabay](https://pixabay.com/) is a great website to find free images to use for your website.
+10. I would also like to thank my mentor Luke for his insight and support during this project.
