@@ -265,6 +265,19 @@ I will most likely change this at a later date.
 
 #### CharacterForm
 
+- This simplifies creating characters.
+- It is directly to the Character model.
+- It will show the fields that will need to be filled in.
+- It is used in the create_character view to handle submissions for new characters.
+- It automatically sends this new data to the database to be saved.
+- It previously used a def __init__() method to override the default init method.
+This was to allow users to select from a list of current campaigns and asign their character to that campaign.
+- However during a mentor session, my mentor suggested that this feature was not needed, 
+and during testing the new character was not even saved to the correct campaign.
+- Therefore I decided to remove this feature.
+- It will be commented out for now, during later implementations it might be useful to use this method to prepopulate 
+character health and stats based on what class type the user selects.
+
 #### AddItemForm
 
 ### Bugs and Debugging
