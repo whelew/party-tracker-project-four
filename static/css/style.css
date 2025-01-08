@@ -59,12 +59,12 @@ h1, th {
 
 /*  Character Creation */
 
-.con-create {
+.con-content {
     display: flex;
     justify-content: center;
 }
 
-.create-character {
+.row-content {
     border: 5px, solid, #000000;
     background-color: #553e12;
     border-radius: 10px;
