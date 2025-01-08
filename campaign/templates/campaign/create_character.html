@@ -1,14 +1,18 @@
 {% extends 'base.html' %} {% block content %}
 
-<div class="container">
-    <div class="container">
-        <h1>Create Character</h1>
-        <form method="POST">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type='submit'>Add Character To Campaign</button>
-        </form>
-        <a href="{% url 'campaign_info' campaign.id %}">Return to {{ campaign.name }}</a>
+<div class="container con-create">
+    <div class="row create-character">
+        <div class="col">
+            <h1>Create Character</h1>
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type='submit' class="btn">Add Character To Campaign</button>
+            </form>
+            <button class="btn">
+                <a href="{% url 'campaign_info' campaign.id %}">Return to {{ campaign.name }}</a>
+            </button>
+        </div>
     </div>
 </div>
 

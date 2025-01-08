@@ -26,8 +26,26 @@ h1, th {
 /* Button Styling */
 
 .btn {
-    background-color: #271c03;
-    color: #e7c4ac;
+    border: 5px, solid, #000000;
+    background-color: #684802;
+    color: #eedf0d;
+    margin: 1px;
+}
+
+/*  Character Creation */
+
+.con-create {
+    display: flex;
+    justify-content: center;
+}
+
+.create-character {
+    border: 5px, solid, #000000;
+    background-color: #553e12;
+    border-radius: 10px;
+    text-align: center;
+    margin: 5px;
+    padding: 1rem;
 }
 
 /* home_page css */
