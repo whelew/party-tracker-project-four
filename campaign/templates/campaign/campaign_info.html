@@ -7,79 +7,94 @@
             <p class="text-center">{{ campaign.description }}</p>
         </div>
     </div>
-</div>
-<div class="row">
-    <div class="col text-center">
-        <table class="table table-striped table-bordered table-arcane">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Class</th>
-                    <th>Health</th>
-                    <th >Str</th>
-                    <th >Dex</th>
-                    <th>Con</th>
-                    <th>Int</th>
-                    <th>Wis</th>
-                    <th>Cha</th>
-                    <th>Inventory</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for character in characters %}
-                <tr>
-                    <td>
-                        {{ character.name }}
-                    </td>
-                    <td>{{ character.character_class }}</td>
-                    <td>
-                        {{ character.health }}
-                        <a href="{% url 'update_character_stat' character.id 'health' 'increment' %}" class="btn btn-sm">+</a>
-                        <a href="{% url 'update_character_stat' character.id 'health' 'decrement' %}" class="btn btn-sm">-</a>
-                    </td>
-                    <td>
-                        {{ character.strength }}
-                        <a href="{% url 'update_character_stat' character.id 'strength' 'increment' %}" class="btn btn-sm">+</a>
-                        <a href="{% url 'update_character_stat' character.id 'strength' 'decrement' %}" class="btn btn-sm">-</a>
-                    </td>
-                    <td>
-                        {{ character.dexterity }}
-                        <a href="{% url 'update_character_stat' character.id 'dexterity' 'increment' %}" class="btn btn-sm">+</a>
-                        <a href="{% url 'update_character_stat' character.id 'dexterity' 'decrement' %}" class="btn btn-sm">-</a>
-                    </td>
-                    <td>
-                        {{ character.constitution }}
-                        <a href="{% url 'update_character_stat' character.id 'constitution' 'increment' %}" class="btn btn-sm">+</a>
-                        <a href="{% url 'update_character_stat' character.id 'constitution' 'decrement' %}" class="btn btn-sm">-</a>
-                    </td>
-                    <td>
-                        {{ character.intelligence }}
-                        <a href="{% url 'update_character_stat' character.id 'intelligence' 'increment' %}" class="btn btn-sm">+</a>
-                        <a href="{% url 'update_character_stat' character.id 'intelligence' 'decrement' %}" class="btn btn-sm">-</a>
-                    </td>
-                    <td>
-                        {{ character.wisdom }}
-                        <a href="{% url 'update_character_stat' character.id 'wisdom' 'increment' %}" class="btn btn-sm">+</a>
-                        <a href="{% url 'update_character_stat' character.id 'wisdom' 'decrement' %}" class="btn btn-sm">-</a>
-                    </td>
-                    <td>
-                        {{ character.charisma }}
-                        <a href="{% url 'update_character_stat' character.id 'charisma' 'increment' %}" class="btn btn-sm">+</a>
-                        <a href="{% url 'update_character_stat' character.id 'charisma' 'decrement' %}" class="btn btn-sm">-</a>
-                    </td>
-                    <td>
-                        <a href="{% url 'add_item_to_inventory' character.id %}" class="btn btn-primary">Inventory</a>
-                    </td>
-                    <td><a href="{% url 'delete_character' character.id %}" class="btn">Delete Character</a></td>
-                </tr>
-                {% endfor %}
-                <tr>
-                    <td colspan="12" class='text-center'>
-                        <a  class="table-arcane" href="{% url 'create_character' campaign.id %}">Add Character</a>
-                    </td>
-                </tr>
-            </tbody>
+    <div class="row">
+        <div class="col text-center">
+            <table class="table table-striped table-bordered table-arcane">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Class</th>
+                        <th>Health</th>
+                        <th>Str</th>
+                        <th>Dex</th>
+                        <th>Con</th>
+                        <th>Int</th>
+                        <th>Wis</th>
+                        <th>Cha</th>
+                        <th>Inventory</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for character in characters %}
+                    <tr>
+                        <td>
+                            {{ character.name }}
+                        </td>
+                        <td>{{ character.character_class }}</td>
+                        <td class="campaign-tab">
+                            {{ character.health }}
+                            <a href="{% url 'update_character_stat' character.id 'health' 'increment' %}"
+                                class="btn btn-attr">+</a>
+                            <a href="{% url 'update_character_stat' character.id 'health' 'decrement' %}"
+                                class="btn btn-attr">-</a>
+                        </td>
+                        <td class="campaign-tab">
+                            {{ character.strength }}
+                            <a href="{% url 'update_character_stat' character.id 'strength' 'increment' %}"
+                                class="btn btn-attr">+</a>
+                            <a href="{% url 'update_character_stat' character.id 'strength' 'decrement' %}"
+                                class="btn btn-attr">-</a>
+                        </td>
+                        <td class="campaign-tab">
+                            {{ character.dexterity }}
+                            <a href="{% url 'update_character_stat' character.id 'dexterity' 'increment' %}"
+                                class="btn btn-attr">+</a>
+                            <a href="{% url 'update_character_stat' character.id 'dexterity' 'decrement' %}"
+                                class="btn btn-attr">-</a>
+                        </td>
+                        <td class="campaign-tab">
+                            {{ character.constitution }}
+                            <a href="{% url 'update_character_stat' character.id 'constitution' 'increment' %}"
+                                class="btn btn-attr">+</a>
+                            <a href="{% url 'update_character_stat' character.id 'constitution' 'decrement' %}"
+                                class="btn btn-attr">-</a>
+                        </td>
+                        <td class="campaign-tab">
+                            {{ character.intelligence }}
+                            <a href="{% url 'update_character_stat' character.id 'intelligence' 'increment' %}"
+                                class="btn btn-attr">+</a>
+                            <a href="{% url 'update_character_stat' character.id 'intelligence' 'decrement' %}"
+                                class="btn btn-attr">-</a>
+                        </td>
+                        <td class="campaign-tab">
+                            {{ character.wisdom }}
+                            <a href="{% url 'update_character_stat' character.id 'wisdom' 'increment' %}"
+                                class="btn btn-attr">+</a>
+                            <a href="{% url 'update_character_stat' character.id 'wisdom' 'decrement' %}"
+                                class="btn btn-attr">-</a>
+                        </td>
+                        <td class="campaign-tab">
+                            {{ character.charisma }}
+                            <a href="{% url 'update_character_stat' character.id 'charisma' 'increment' %}"
+                                class="btn btn-attr">+</a>
+                            <a href="{% url 'update_character_stat' character.id 'charisma' 'decrement' %}"
+                                class="btn btn-attr">-</a>
+                        </td>
+                        <td class="campaign-tab">
+                            <a href="{% url 'add_item_to_inventory' character.id %}"
+                                class="btn btn-primary">Inventory</a>
+                        </td>
+                        <td class="campaign-tab"><a href="{% url 'delete_character' character.id %}" class="btn">Delete Character</a></td>
+                    </tr>
+                    {% endfor %}
+                    <tr>
+                        <td colspan="12" class='text-center campaign-tab'>
+                            <a class="table-arcane" href="{% url 'create_character' campaign.id %}">Add Character</a>
+                        </td>
+                    </tr>
+                </tbody>
+        </div>
     </div>
 </div>
 

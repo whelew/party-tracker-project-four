@@ -27,7 +27,7 @@
                     {% for campaign in current_campaign %}
                     <tr>
                         <td>
-                            <a  class="btn table-arcane" href="{% url 'campaign_info' campaign.id %}">{{ campaign.name }}</a>
+                            <a  class="btn" href="{% url 'campaign_info' campaign.id %}">{{ campaign.name }}</a>
                         </td>
                         <td>{{ campaign.description }}</td>
                         <td>

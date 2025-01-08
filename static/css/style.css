@@ -23,6 +23,20 @@ h1, th {
     padding: 1rem;
 }
 
+/* Campaign Info Screen */
+
+.campaign-tab {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+}
+
+.btn-attr {
+    border: 1px;
+    padding: 5px;
+    margin: auto;
+}
+
 /* Button Styling */
 
 .btn {

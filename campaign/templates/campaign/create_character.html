@@ -9,9 +9,7 @@
                 {{ form.as_p }}
                 <button type='submit' class="btn">Add Character To Campaign</button>
             </form>
-            <button class="btn">
-                <a href="{% url 'campaign_info' campaign.id %}">Return to {{ campaign.name }}</a>
-            </button>
+            <a class="btn" href="{% url 'campaign_info' campaign.id %}">Return to {{ campaign.name }}</a>
         </div>
     </div>
 </div>
