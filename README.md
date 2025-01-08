@@ -16,7 +16,7 @@
 - [Integrity Error](#integrity-error)
 - [Circular Import Error](#circular-import)
 
-## [Credits](#credits-1)
+## [Credits & Technologies](#credits--technologies-1)
 
 ## Design
 
@@ -413,7 +413,23 @@ Resolving the issue with using a string method instead of importing the Characte
 Although I created ERD's to help with model creation, in the future I will have to be more prepared with how my models will interact with one another.
 Keeping this lesson in mind will help me avoid errors such as this. 
 
-## Credits
+## Credits & Technologies
+
+### Technologies
+
+Here is a list of technologies I used to compelte my project.
+
+1. The Framework [Django](https://www.djangoproject.com/).
+2. I used [Django Allauth](https://docs.allauth.org/en/latest/) for handling user authentication.
+3. [Bootstrap]() was throughout the project to easily format and structure my site. 
+4. [Gunicorn](https://gunicorn.org/) to help my python based web application run.
+5. [Whitenoise](https://whitenoise.readthedocs.io/en/stable/index.html) to allow my web app to serve its own staticfiles.
+6. [Psycopg2](https://pypi.org/project/psycopg2/) a widely used PostgreSQL adapter.
+
+
+### Credits
+
+Here is a list of documents I used to help create my project.
 
 1. [Django Documentation](https://docs.djangoproject.com/) was very useful in helping me understand and implement my models, views, forms and templates.
 2. [Python Documentation](https://docs.python.org/) was helpful when handling custom logic in my models and views. It is a useful reference for when you are working with Python.
@@ -426,4 +442,5 @@ then customise later with my own css style sheet.
 8. [Slack](https://app.slack.com/) provided useful when also researching issues and bugs as I was able to look at other students projects and see how they fixed previous similar issues.
 9. [Pixabay](https://pixabay.com/) is a great website to find free images to use for your website.
 10. [Favicon](https://favicon.io/) was used to create and generate a free favicon for my website.
-11. I would also like to thank my mentor Luke for his insight and support during this project.
+11. [Coolers](https://coolors.co/) was used to map out and finalise my css color scheme.
+12. I would also like to thank my mentor Luke for his insight and support during this project.
