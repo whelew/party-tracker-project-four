@@ -1,9 +1,9 @@
 {% extends 'base.html' %} {% block content %}
 
-<div class="container con-content">
+<div class="container con-content" id="con-invt">
     <h1>{{ inventory.character.name }}'s Inventory</h1>
-    <div class="row row-content">
-        <div class="col">
+    <div class="row row-content" id="row-invt">
+        <div class="col" id="invt-table">
             <table class="table table-striped table-bordered">
                 <thead>
                     <tr>
@@ -36,19 +36,19 @@
 
 
     <div class="row row-content">
-        <div class="col">
+        <div class="col" id="add-item">
             <h1>Add Item</h1>
             <form method="POST">
                 {% csrf_token %}
                 {{ form.as_p }}
-                <button class="btn btn-primary">Add Item</button>
+                <button class="btn">Add Item</button>
             </form>
         </div>
     </div>
 
     <div class="row row-content">
         <div class="col">
-            <a href="{% url 'campaign_info' inventory.character.campaign_id  %}" class="btn btn-primary">Return To Campaign</a>
+            <a href="{% url 'campaign_info' inventory.character.campaign_id  %}" class="btn">Return To Campaign</a>
         </div>
     </div>
 </div>
