@@ -6,7 +6,6 @@
             <h1>Delete Campaign:</h1>
             <p>Are you sure you want to delete <strong>{{ campaign.name }}</strong>?</p>
             <p>Your Campaign will be lost forever.</p>
-
             <form method="POST">
                 {% csrf_token %}
                 <button type="submit" class="btn">Confirm Delete</button>

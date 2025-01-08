@@ -4,7 +4,7 @@
     <div class="row row-content">
         <div class="col">
             <h1>Create Character</h1>
-            <form method="POST">
+            <form method="POST" autocomplete="off">
                 {% csrf_token %}
                 {{ form.as_p }}
                 <button type='submit' class="btn">Add Character To Campaign</button>

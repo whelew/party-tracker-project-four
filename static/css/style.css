@@ -99,7 +99,17 @@ button {
     padding: 0.75rem;
     color: #f0a500;
     text-shadow: darkgoldenrod;
+    word-wrap: break-word;
+    white-space: normal;
 }
+
+.table td {
+    vertical-align: middle;
+    max-width: 200px;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
 
 /* Form Styling */
 
