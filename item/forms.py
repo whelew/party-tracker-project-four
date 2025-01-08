@@ -1,5 +1,5 @@
 from django import forms
-from .models import Item, Inventory, InventoryItem
+from .models import Item
 
 class AddItemForm(forms.Form):
     # Allow user to select an item and quantity of item.
