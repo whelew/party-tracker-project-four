@@ -174,7 +174,7 @@ h1, th {
     width: 100%;
 }
 
-#invt-table {
+#col-invt {
     flex: 1;
     padding: 1rem;
     background-color: #553e12;
@@ -188,6 +188,16 @@ h1, th {
     background-color: #553e12;
     border-radius: 10px;
     text-align: center;
+}
+
+#int-title {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#invt-scroll {
+    height: 400px;
+    overflow: scroll;
 }
 
 /* Smaller Screens */
