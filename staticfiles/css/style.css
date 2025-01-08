@@ -26,8 +26,6 @@ h1, th {
 /* Campaign Info Screen */
 
 .campaign-tab {
-    display: flex;
-    justify-content: space-between;
     font-size: 18px;
 }
 
