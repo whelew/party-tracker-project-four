@@ -190,15 +190,22 @@ h1, th {
     text-align: center;
 }
 
-#int-title {
+#invt-title {
+    display: flex;
+    justify-self: center;
     text-align: center;
     margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
 #invt-scroll {
     height: 400px;
     overflow: scroll;
+    border: 4px solid #795505;
+    background-color: #2a2a48;
+    border-radius: 10px;
 }
+
 
 /* Smaller Screens */
 
