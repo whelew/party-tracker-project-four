@@ -75,11 +75,11 @@ h1, th {
 /* Override Bootstrap Table Stylings */
 
 .table {
-    background-color: #1b1b3a;
-    --bs-table-color: #f0a500;
+    background-color: rgba(59, 43, 43, 0.7);
+    --bs-table-color:rgba(59, 43, 43, 0.7);
     color: #f0a500;
     text-shadow: darkgoldenrod;
-    border-color: #6c5ce7;
+    border-color:rgb(51, 32, 3);
     width: 100%;
     margin: 1rem 0;
     text-align: center;
@@ -92,11 +92,11 @@ h1, th {
 }
 
 .table th {
-    background-color: #2c2c54;
+    background-color: rgba(59, 43, 43, 0.7);
 }
 
 .table td {
-    background-color: #1b1b3a;
+    background-color: rgba(59, 43, 43, 0.7);
 }
 
 /*  Character Creation */
@@ -167,14 +167,6 @@ h1, th {
     height: 100%;
     object-fit: cover;
     z-index: 1;
-}
-
-/* Table Arcane Color Scheme */
-
-.table-arcane {
-    background-color: #1b1b3a;
-    color: #f0a500;
-    border-color: #6c5ce7;
 }
 
 /* Invetnory Screen */
