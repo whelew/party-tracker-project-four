@@ -4,7 +4,10 @@
     {% trans "Signup" %}
 {% endblock head_title %}
 {% block content %}
-    {% element h1 %}
+<div class="container con-content">
+    <div class="row row-content">
+        <div class="">
+            {% element h1 %}
         {% trans "Sign Up" %}
     {% endelement %}
     {% setvar link %}
@@ -42,4 +45,7 @@
     {% if SOCIALACCOUNT_ENABLED %}
         {% include "socialaccount/snippets/login.html" with page_layout="entrance" %}
     {% endif %}
+        </div>
+    </div>
+</div>
 {% endblock content %}
