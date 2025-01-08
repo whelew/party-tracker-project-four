@@ -31,13 +31,13 @@
                         </td>
                         <td>{{ campaign.description }}</td>
                         <td>
-                            <a href="{% url 'delete_campaign' campaign.id %}" class="btn btn-danger">Delete Campaign</a>
+                            <a href="{% url 'delete_campaign' campaign.id %}" class="btn">Delete Campaign</a>
                         </td>
                     </tr>
                     {% endfor %}
                     <tr>
                         <td colspan="12" class='text-center'>
-                            <a href="{% url 'create_campaign' %}" class="btn btn-primary">Create New Campaign</a>
+                            <a href="{% url 'create_campaign' %}" class="btn">Create New Campaign</a>
                         </td>
                     </tr>
                 </tbody>
