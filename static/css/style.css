@@ -74,9 +74,7 @@ h1, th {
 /* Override Bootstrap Table Stylings */
 
 .table {
-    background-color: rgba(59, 43, 43, 0.7);
-    --bs-table-color:rgba(59, 43, 43, 0.7);
-    --bs-table-striped-color: ;
+    --bs-table-bg: rgba(59, 43, 43, 0.7);
     color: #f0a500;
     text-shadow: darkgoldenrod;
     border-color:rgb(51, 32, 3);
@@ -90,14 +88,6 @@ h1, th {
     color: #f0a500;
     text-shadow: darkgoldenrod;
 }
-
-/* .table th {
-    background-color: rgba(59, 43, 43, 0.7);
-}
-
-.table td {
-    background-color: rgba(59, 43, 43, 0.7);
-} */
 
 /*  Character Creation */
 
