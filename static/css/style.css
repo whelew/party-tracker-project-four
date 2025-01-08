@@ -35,9 +35,8 @@ h1, th {
 }
 
 .bg-body-tertiary {
-    border: 4px solid black;
-    background-color: #553e12 !important;
-    border-radius: 10px;
+    border: 4px solid #795505;
+    background-color: #684802 !important;
 }
 
 /* Campaign Info Screen */
@@ -77,6 +76,7 @@ h1, th {
 .table {
     background-color: rgba(59, 43, 43, 0.7);
     --bs-table-color:rgba(59, 43, 43, 0.7);
+    --bs-table-striped-color: ;
     color: #f0a500;
     text-shadow: darkgoldenrod;
     border-color:rgb(51, 32, 3);
@@ -91,13 +91,13 @@ h1, th {
     text-shadow: darkgoldenrod;
 }
 
-.table th {
+/* .table th {
     background-color: rgba(59, 43, 43, 0.7);
 }
 
 .table td {
     background-color: rgba(59, 43, 43, 0.7);
-}
+} */
 
 /*  Character Creation */
 
@@ -115,18 +115,7 @@ h1, th {
     padding: 1rem;
 }
 
-/* home_page css */
-
-.login-screen {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-/* Allows content to show above lower index content */
+/* Home Page - Allows content to show above lower index content */
 
 .content-overlay {
     position: relative;
@@ -145,6 +134,15 @@ h1, th {
 
 
 /* login screen */
+
+.login-screen {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
 
 .login-content {
     justify-self: center;
