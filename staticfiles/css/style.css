@@ -29,6 +29,7 @@ h1, th {
 
 .campaign-tab {
     font-size: 18px;
+    text-transform: capitalize;
 }
 
 /* Button Styling */
@@ -84,6 +85,7 @@ h1, th {
 }
 
 /* Allows content to show above lower index content */
+
 .content-overlay {
     position: relative;
     z-index: 2;
@@ -98,6 +100,9 @@ h1, th {
     margin: 0;
     padding: 0;
 }
+
+
+/* login screen */
 
 .login-content {
     justify-self: center;
