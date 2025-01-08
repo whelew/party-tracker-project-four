@@ -25,6 +25,21 @@ h1, th {
     padding: 2rem 1rem;
 }
 
+/* Navbar Custom Settings */
+
+.navbar {
+    --bs-navbar-color: #f9f4a6;
+    --bs-navbar-active-color: #f0a500;
+    --bs-navbar-hover-color: #f0a500;
+    --bs-navbar-brand-color: #f9f4a6;
+}
+
+.bg-body-tertiary {
+    border: 4px solid black;
+    background-color: #553e12 !important;
+    border-radius: 10px;
+}
+
 /* Campaign Info Screen */
 
 .campaign-tab {
