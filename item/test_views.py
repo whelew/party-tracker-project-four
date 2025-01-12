@@ -60,10 +60,12 @@ class AddItemToInventory(TestCase):
         self.assertTrue(login_success)
         url = reverse('add_item_to_inventory', kwargs={'character_id': self.character.id})
         response = self.client.get(url)
-        if login_success:
-            self.assertEqual(response.status_code, 200)
-            self.assertTemplateUsed(response, 'inventory/character_inventory.html')
-        else:
-            self.assertEqual(response.status_code, 302)
-            self.assertRedirects(response, '/accounts/login/?next=' + url)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'inventory/character_inventory.html')
+        
+    def test_not_logged_in(self):
+        url = reverse('add_item_to_inventory', kwargs={'character_id': self.character.id})
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 302)
+        self.assertRedirects(response, '/accounts/login/?next=' + url)
         
