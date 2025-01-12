@@ -394,8 +394,7 @@ input and map it to my backend automatically.
 | Click return to campaign button | Clicked return to campaign button. | The user will be redirected to the campaign info page. | User is successfully redirected towards the campaign info page. | Pass |
 | Update character attributes | Clicked (+) or (-) button. | Clicking this button will increment (+) or decrement (-) targeted attribute. | User is able to successfully adjust attributes. | Pass |
 | Update character attributes validators. | Clicked (+) or (-) button. | User will be unable to adjust the 6 stat attributes (excluding health) past 20 or below 1. | User is successfully unable to adjust the 6 stat attributes past 20 or below 1. | Pass |
-| :--------------: | :------------: | :--------------: | :-----------: | :--: |
-| :--------------: | :------------: | :--------------: | :-----------: | :--: |
+| Footer icons | Clicked footer icon. | User will be redirected to associated website. | User is successfully redirected towards targeted sight, example, user clicked discord logo and is taken to a seperate tab and the discord website is loaded. | Pass |
 
 
 
