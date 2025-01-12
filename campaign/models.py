@@ -41,7 +41,7 @@ class Character(models.Model):
     SET_STAT = [MinValueValidator(1), MaxValueValidator(20)]
 
     character_class = models.CharField(max_length=50, choices=CLASS_TYPES)
-    health = models.IntegerField(default=10)
+    health = models.IntegerField(default=10, validators=[MinValueValidator(1), MaxValueValidator(2000)])
     strength = models.IntegerField(default=10, validators=SET_STAT)
     dexterity = models.IntegerField(default=10, validators=SET_STAT)
     constitution = models.IntegerField(default=10, validators=SET_STAT)
