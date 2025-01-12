@@ -72,5 +72,12 @@ class TestCharacterForm(TestCase):
             invalid_attr[attribute] = 0
             form = CharacterForm(data=invalid_attr)
             self.assertFalse(form.is_valid(), msg=f'Form Is Not Valid when {attribute} is lower than 1')
+        
+        for field in ['name', 'character_class', 'health', 'strength', 
+                      'dexterity', 'constitution', 'intelligence', 'wisdom', 'charisma']:
+            invalid_fields = character_data.copy()
+            invalid_fields[field] = ''
+            form = CharacterForm(data=invalid_fields)
+            self.assertFalse(form.is_valid(), msg=f'Form Is Not Valid {field} is empty')
 
         
