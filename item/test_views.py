@@ -24,7 +24,7 @@ class ItemListTest(TestCase):
         self.assertContains(response, 'Fishing Rod')
         self.assertContains(response, 'Torch')
 
-class AddItemToInventory(TestCase):
+class AddItemToInventoryTest(TestCase):
     def setUp(self):
         self.user = User.objects.create_user(username='test', password='password123', email='test@test.com')
         self.campaign = Campaign.objects.create(name='Testcampaign', description='This is a test', user=self.user)
@@ -68,4 +68,23 @@ class AddItemToInventory(TestCase):
         response = self.client.get(url)
         self.assertEqual(response.status_code, 302)
         self.assertRedirects(response, '/accounts/login/?next=' + url)
+
+class DeleteItemTest(TestCase):
+    def setUp(self):
+        self.user = User.objects.create_user(username='test', password='password123', email='test@test.com')
+        self.campaign = Campaign.objects.create(name='Testcampaign', description='This is a test', user=self.user)
+        self.character = Character.objects.create(name='Gandalf', campaign=self.campaign)
+        self.inventory = Inventory.objects.get(character=self.character)
+        self.item = Item.objects.create(name='Rope', description='50m of Rope.')
+        self.inventory_item = InventoryItem.objects.create(inventory=self.inventory, item=self.item, quantity = 1)
+
+    def test_delete_item(self):
+        login_success = self.client.login(username='test', password='password123')
+        self.assertTrue(login_success)
+        url = reverse('delete_item', kwargs={'inventory_item_id': self.inventory_item.id})
+        response = self.client.post(url)
+
+        with self.assertRaises(InventoryItem.DoesNotExist):
+            InventoryItem.objects.get(id=self.inventory_item.id)
         
+        self.assertRedirects(response, reverse('add_item_to_inventory', kwargs={'character_id': self.character.id}))
