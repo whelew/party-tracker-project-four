@@ -56,3 +56,13 @@ class CampaignTest(TestCase):
         self.assertIn('characters', response.context)
         self.assertEqual(len(response.context['characters']), 1)
 
+    # Test campaign info when campaign has no characters
+    def test_campaign_info_no_characters(self):
+        # Create campaign without any characters
+        empty_campaign = Campaign.objects.create(name = 'Empty', description = 'No characters', user=self.user)
+        url = reverse('campaign_info', kwargs ={'pk': empty_campaign.id})
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed('campaign/campaign_info.html')
+        self.assertIn('characters', response.context)
+        self.assertEqual(len(response.context['characters']), 0)
