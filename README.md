@@ -4,6 +4,7 @@
 
 ## [Design](#design-1)
 
+- [Wireframes](#wire-frames)
 - [Entity Relationship Diagram](#entity-relationship-diagram)
 
 ## [Functionality](#functionality-1)
@@ -24,6 +25,21 @@
 ## [Credits & Technologies](#credits--technologies-1)
 
 ## Design
+
+### Wire Frames
+
+The wire frames were the first thing I worked on when designing my website. The final product may not look exactly like the wireframes, 
+however being able to visualise the website allowed me to plan out the structure of each page but also the models I would need. 
+
+![Image of login page wireframe](/static/images/login-wireframe.png)
+![Image of home page wireframe](/static/images/home-wireframe.png)
+![Image of campaign page wireframe](/static/images/campaign-wireframe.png)
+![Image of campaign detail page wireframe](/static/images/campaign-detail-wireframe.png)
+![Image of community page wireframe](/static/images/community-wireframe.png)
+![Image of contact page wireframe](/static/images/contact-wireframe.png)
+![Image of monster library page wireframe](/static/images/monster-library-wireframe.png)
+
+
 
 ### Entity Relationship Diagram:
 
