@@ -14,13 +14,13 @@ class CampaignTest(TestCase):
         self.character = Character.objects.create(
             name='Gandalf',
             character_class = 'wizard',
-            health = 50
-            strength = 18
-            dexterity = 14
-            constitution = 20
-            intelligence = 20
-            wisdom = 20
-            charisma = 20
+            health = 50,
+            strength = 18,
+            dexterity = 14,
+            constitution = 20,
+            intelligence = 20,
+            wisdom = 20,
+            charisma = 20,
             campaign=self.campaign
             )
         self.inventory = Inventory.objects.get(character=self.character)
