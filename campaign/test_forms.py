@@ -62,24 +62,15 @@ class TestCharacterForm(TestCase):
         }
 
         form = CharacterForm(data=character_data)
-
         self.assertTrue(form.is_valid(), msg='Form Is Valid')
 
-    def test_if_data_is_invalid(self):
-        """ Test if strength stat is over validator max 20"""
-        character_data = {
-            'name': 'Aragorn',
-            'character_class': 'paladin',
-            'health': '50',
-            'strength': '21',
-            'dexterity': '19',
-            'constitution': '20',
-            'intelligence': '18',
-            'wisdom': '20',
-            'charisma': '20',
-        }
+        for attribute in ['strength', 'dexterity', 'constitution', 'intelligence', 'wisdom', 'charisma']:
+            invalid_attr = character_data.copy()
+            invalid_attr[attribute] = 21
+            form = CharacterForm(data=invalid_attr)
+            self.assertFalse(form.is_valid(), msg=f'Form Is Not Valid {attribute} is higher than 20')
+            invalid_attr[attribute] = 0
+            form = CharacterForm(data=invalid_attr)
+            self.assertFalse(form.is_valid(), msg=f'Form Is Not Valid when {attribute} is lower than 1')
 
-        form = CharacterForm(data=character_data)
-
-        self.assertFalse(form.is_valid(), msg='Form Is Not Valid')
         
