@@ -16,7 +16,7 @@ class CampaignTest(TestCase):
             character_class = 'wizard',
             health = 50,
             strength = 18,
-            dexterity = 14,
+            dexterity = 1,
             constitution = 20,
             intelligence = 20,
             wisdom = 20,
@@ -147,7 +147,7 @@ class CampaignTest(TestCase):
         self.assertRedirects(response, reverse('campaign_info', kwargs={'pk':self.campaign.id}))
 
     # Test increment character stats post request
-    def test_increment_character_stat_post(self):
+    def test_update_character_stat_post(self):
         for action, expected_value in [('increment', 51), ('decrement', 50)]:
             url = reverse('update_character_stat', 
                 kwargs={
@@ -159,4 +159,18 @@ class CampaignTest(TestCase):
             self.character.refresh_from_db()
             self.assertEqual(self.character.health, expected_value)
             self.assertRedirects(response, reverse('campaign_info', kwargs={'pk':self.campaign.id}))
+
+    def test_invalid_stat_increment(self):
+        for action, expected_value, attribute in [('increment', 20, 'wisdom'), ('decrement', 1, 'dexterity')]:
+            url = reverse('update_character_stat', 
+                kwargs={
+                    'character_id': self.character.id,
+                    'attribute': attribute,
+                    'action': action
+                    })
+            response = self.client.post(url)
+            self.assertEqual(getattr(self.character, attribute), expected_value)
+            self.assertRedirects(response, reverse('campaign_info', kwargs={'pk':self.campaign.id}))
+
+        
 
