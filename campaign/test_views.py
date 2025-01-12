@@ -33,11 +33,11 @@ class CampaignTest(TestCase):
     # Test post create campaign request
     def create_campaign_post(self):
         url = reverse('create_campaign')
-        form_data = {
+        campaign_data = {
             'name':'Test Campaign 2',
             'description':'This is my second test campaign'
         }
-        response = self.client.post(url, form_data)
+        response = self.client.post(url, campaign_data)
         current_campaign = Campaign.objects.get(name='Test Campaign 2')
         self.assertEqual(current_campaign.name, 'Test Campaign 2')
         self.assertEqual(current_campaign.description, 'This is my second test campaign')
@@ -77,4 +77,23 @@ class CampaignTest(TestCase):
 
 
     # Test create character post
-    # def test_create_character_post(self):
+    def test_create_character_post(self):
+        url = reverse('create_character', kwargs={'campaign_id':self.campaign.id})
+        character_data = {
+            'name':'Gimli',
+            'character_class':'fighter',
+            'health':50,
+            'strength':20,
+            'dexterity':10,
+            'constitution':20,
+            'intelligence':10,
+            'wisdom':18,
+            'charisma':20,
+            'campaign':self.campaign.id
+        }
+        response = self.client.post(url, character_data)
+        current_characters = Character.objects.filter(campaign_id=self.campaign).last()
+        self.assertEqual(current_characters.name, 'Gimli')
+        self.assertEqual(current_characters.strength, 20)
+        self.assertEqual(current_characters.character_class, 'fighter')
+        self.assertRedirects(response, reverse('campaign_info', kwargs = {'pk':self.campaign.id}))
