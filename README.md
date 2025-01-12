@@ -359,6 +359,25 @@ input and map it to my backend automatically.
 
 ### Manual Testing
 
+| Function/Feature | Test Performed | Expected Outcome | Final Outcome | Pass |
+| :--------------: | :------------: | :--------------: | :-----------: | :--: |
+| Click sign up button. | Clicked register on the navbar or the signup button.  | User will be redirected to signup.html | User is correctly redirected to signup page. | Pass |
+| Signing up to the website | User inputs valid data into signup fields. | User successfully signs up and is redirected to home page. | User successfully signs up and is redirected to homepage | Pass |
+| Click the login button home page | Clicked login button on hompage or navbar. | User will be redirected to login.html template. | User is successfully redirected to login page. | Pass |
+| Click the login button login page | Clicked the login button after filling fields with valid data. | User will be signed into their existing account. | If the user has an account the user is successfully signed in, homepage is loaded with user authenticated features. | Pass |
+| Click logout button on navbar or home page | Clicked logout button on navbar or homepage. | User will be redirected towards logout.html template. | User is successfully redirected to the logout page. | Pass |
+| Click signout button on signout page | Clicked signout button on logout page | User will be signed out and redirected towards home page. | User is successfully redirected to homepage after signing out, all authenticated features are now unavailable. | Pass |
+| Click home button on navbar | Clicked home button on the navbar. | User will be redirected towards homepage. | User is successfuly redirected towards homepage. | Pass |
+| Click campaign button on navbar or homepage | Clicked campaign button on the navbar or homepage. | If user is signed in they will be redirected towards campaign.html template | If user is signed in they will be successfully redirected towards campaign page. | Pass |
+| Click item button on navbar | Clicked item button on navbar | User will be redirected to the item library tempalte.  | User is successfully redirected towards item library page. | Pass |
+| CLick Monster Library button on navbar or home page | Clicked monster library button on navbar or homepage. | User will be redirected towards monster library template. | User is successfuly redirected towards the monster library. | Pass |
+| :--------------: | :------------: | :--------------: | :-----------: | :--: |
+| :--------------: | :------------: | :--------------: | :-----------: | :--: |
+| :--------------: | :------------: | :--------------: | :-----------: | :--: |
+| :--------------: | :------------: | :--------------: | :-----------: | :--: |
+| :--------------: | :------------: | :--------------: | :-----------: | :--: |
+| :--------------: | :------------: | :--------------: | :-----------: | :--: |
+
 ### Automated Testing
 
 - Django uses a standard python library module called [unittest](https://docs.python.org/3/library/unittest.html#module-unittest)
@@ -382,9 +401,9 @@ more understandable and easier to implement. I was able to reuse part of my code
 - DRY (Don't Repeat Yourself). Trying to keep inline with DRY principles, within each app I would normal create only one instance of the
   models. For instance CampaignTest, defines the setUp().
 - Here is the CampaignTest example:
--  self.user = User.objects.create_user(username='test', password='password123', email='test@test.com')
--  self.campaign = Campaign.objects.create(name='Testcampaign', description='This is a test', user=self.user)
--  self.character = Character.objects.create(
+- self.user = User.objects.create_user(username='test', password='password123', email='test@test.com')
+- self.campaign = Campaign.objects.create(name='Testcampaign', description='This is a test', user=self.user)
+- self.character = Character.objects.create(
   name='Gandalf',
   character_class = 'wizard',
   health = 50,
@@ -396,16 +415,15 @@ more understandable and easier to implement. I was able to reuse part of my code
   charisma = 20,
   campaign=self.campaign
   )
--  self.inventory = Inventory.objects.get(character=self.character)
--  login_success = self.client.login(username='test', password='password123')
--  self.assertTrue(login_success)
+- self.inventory = Inventory.objects.get(character=self.character)
+- login_success = self.client.login(username='test', password='password123')
+- self.assertTrue(login_success)
 
 Here I define my User, Campaign, Character and Inventory, I also pass in a user authentication check as most of my views
 require the user to be logged in as I use the @login_required decorator.
 
 - After creating instances of my models, I am then able to test all of my other views from within this one test.
 - This helped me stick to a DRY rule of thumb and reduce the amount of code that would have been repeated if i hadn't.
-
 
 #### Form Tests
 
