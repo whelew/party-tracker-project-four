@@ -210,12 +210,13 @@ textarea {
 
 .login-image {
     position: absolute;
+    background-attachment: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: 1;
+    z-index: 0;
 }
 
 /* Invetnory Screen */
@@ -269,7 +270,37 @@ textarea {
     --bs-table-bg: rgb(10 10 10);
 }
 
+/* Footer Styling */
 
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #684802 !important;
+    color: #f9f4a6;
+    z-index: 1;
+    height: 6%;
+}
+
+.footer-icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style: none;
+    color: #f9f4a6;
+    border: 5px, solid, #000000;
+}
+.fa-brands {
+    color: #f9f4a6;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.fa-brands:hover {
+    color: #f0a500;
+}
 
 /* Smaller Screens */
 
