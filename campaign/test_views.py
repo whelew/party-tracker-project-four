@@ -148,7 +148,7 @@ class CampaignTest(TestCase):
 
     # Test increment character stats post request
     def test_increment_character_stat_post(self):
-        for action, expected_value in [('increment', 51), ('decrement', 49)]:
+        for action, expected_value in [('increment', 51), ('decrement', 50)]:
             url = reverse('update_character_stat', 
                 kwargs={
                     'character_id': self.character.id,
