@@ -42,3 +42,44 @@ class TestCampaignForm(TestCase):
         form = CampaignForm(data=campaign_data)
 
         self.assertTrue(form.is_valid(), msg='This form is valid')
+
+class TestCharacterForm(TestCase):
+    def setUp(self):
+        self.user = User.objects.create_user(username='test', password='password123', email='test@test.com')
+        self.campaign = Campaign.objects.create(name='Testcampaign4', description='This is test four', user=self.user)
+
+    def test_if_data_is_valid(self):
+        character_data = {
+            'name': 'Aragorn',
+            'character_class': 'paladin',
+            'health': '50',
+            'strength': '20',
+            'dexterity': '19',
+            'constitution': '20',
+            'intelligence': '18',
+            'wisdom': '20',
+            'charisma': '20',
+        }
+
+        form = CharacterForm(data=character_data)
+
+        self.assertTrue(form.is_valid(), msg='Form Is Valid')
+
+    def test_if_data_is_invalid(self):
+        """ Test if strength stat is over validator max 20"""
+        character_data = {
+            'name': 'Aragorn',
+            'character_class': 'paladin',
+            'health': '50',
+            'strength': '21',
+            'dexterity': '19',
+            'constitution': '20',
+            'intelligence': '18',
+            'wisdom': '20',
+            'charisma': '20',
+        }
+
+        form = CharacterForm(data=character_data)
+
+        self.assertFalse(form.is_valid(), msg='Form Is Not Valid')
+        
