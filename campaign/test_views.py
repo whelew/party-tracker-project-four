@@ -18,17 +18,19 @@ class CampaignTest(TestCase):
 
     # Test to retrieve and render only users campaign
     def test_campaign_list(self):
-        url = reverse('campaign_info', kwargs ={'pk': self.campaign.id})
+        url = reverse('campaign_list')
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed('campaign/campaign.html')
     
+    # Test get create campaign request
     def create_campaign_get(self):
         url = reverse('create_campaign')
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed('campaign/create_campaign.html')
 
+    # Test post create campaign request
     def create_campaign_post(self):
         url = reverse('create_campaign')
         form_data = {
@@ -40,4 +42,17 @@ class CampaignTest(TestCase):
         self.assertEqual(current_campaign.name, 'Test Campaign 2')
         self.assertEqual(current_campaign.description, 'This is my second test campaign')
         self.assertRedirects(response, url)
+
+    # Test to see if campaign info contains campaign info and all characters
+    def test_campaign_info(self):
+        url = reverse('campaign_info', kwargs ={'pk': self.campaign.id})
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed('campaign/campaign_info.html')
+        current_campaign = Campaign.objects.get(pk=self.campaign.id, user=self.user)
+        self.assertEqual(current_campaign.name, 'Testcampaign')
+        self.assertEqual(current_campaign.description, 'This is a test')
+        self.assertEqual(self.character.name, 'Gandalf')
+        self.assertIn('characters', response.context)
+        self.assertEqual(len(response.context['characters']), 1)
 
