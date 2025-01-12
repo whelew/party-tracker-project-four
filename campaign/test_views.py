@@ -103,6 +103,7 @@ class CampaignTest(TestCase):
         url = reverse('delete_campaign', kwargs={'campaign_id':self.campaign.id})
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.context['campaign'], self.campaign)
         self.assertTemplateUsed('campaign/confirm_delete.html')
     
     # Test for deleting a campaign post request
