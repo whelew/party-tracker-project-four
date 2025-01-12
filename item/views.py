@@ -6,7 +6,6 @@ from .forms import AddItemForm
 # Create your views here.
 
 
-@login_required
 def item_list(request):
     """
     Create a list of Items using Item Model
