@@ -361,7 +361,17 @@ input and map it to my backend automatically.
 
 ### Automated Testing
 
+- Django uses a standard python library module called [unittest](https://docs.python.org/3/library/unittest.html#module-unittest)
+to run automated tests.
+- Each test was created within either a test_forms.py file or a test_views.py file. This was to allow seperation from the views and forms.
+- Here is a screenshot of my completed automated tests.
+- 26 in total with 0 issues.
+
+![Image of 26 Automated Tests completed without issue.](/static/images/unittest.png)
+
 ### Coverage Report
+
+Here is a coverage report using [coverage](https://coverage.readthedocs.io/en/7.6.10/)
 
 |                             Name                              | Stmts | Miss | Cover |
 | :-----------------------------------------------------------: | :---: | :--: | :---: |
