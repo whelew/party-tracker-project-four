@@ -145,3 +145,16 @@ class CampaignTest(TestCase):
             Character.objects.get(id=self.character.id)
 
         self.assertRedirects(response, reverse('campaign_info', kwargs={'pk':self.campaign.id}))
+
+    # Test increment character stats post request
+    def test_increment_character_stat_post(self):
+        url = reverse('update_character_stat', 
+            kwargs={
+                'character_id': self.character.id,
+                'attribute': 'health',
+                'action': 'increment'
+                })
+        response = self.client.post(url)
+        self.character.refresh_from_db()
+        self.assertEqual(self.character.health, 51)
+        self.assertRedirects(response, reverse('campaign_info', kwargs={'pk':self.campaign.id}))
