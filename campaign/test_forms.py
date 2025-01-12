@@ -78,6 +78,12 @@ class TestCharacterForm(TestCase):
             invalid_fields = character_data.copy()
             invalid_fields[field] = ''
             form = CharacterForm(data=invalid_fields)
-            self.assertFalse(form.is_valid(), msg=f'Form Is Not Valid {field} is empty')
+            self.assertFalse(form.is_valid(), msg=f'Form Is Not Valid when {field} is empty')
+
+        for validator in [0, 2001]:
+            invalid_health = character_data.copy()
+            invalid_health['health'] = validator
+            form = CharacterForm(data=invalid_health)
+            self.assertFalse(form.is_valid(), msg=f'Form Is Not Valid if health is {validator}')
 
         
