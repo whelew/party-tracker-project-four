@@ -66,3 +66,15 @@ class CampaignTest(TestCase):
         self.assertTemplateUsed('campaign/campaign_info.html')
         self.assertIn('characters', response.context)
         self.assertEqual(len(response.context['characters']), 0)
+
+    
+    # Test create character get
+    def test_create_character_get(self):
+        url = reverse('create_character', kwargs={'campaign_id':self.campaign.id})
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed('campaign/create_campaign.html')
+
+
+    # Test create character post
+    # def test_create_character_post(self):
