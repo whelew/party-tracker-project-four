@@ -383,13 +383,19 @@ input and map it to my backend automatically.
 | Click add character to campaign button. | Valid data is passed into fields and the add character to campaign button is clicked. | User will be able to add a new character to their current campaign. | User is able to successfully add a new character to their campaign. | Pass |
 | Click return to {title of their campaign button}. | Clicked return to {title of their campaign button} | User will be redirected back to campaign_info.html template. | USer is successfully redirected to their campaign info page. | Pass |
 | Invalid Input Create Character | Invalid data is passed into all fields. | If user inputs invalid data they will be asked to change their input before being able to create new character. | User inputs invalid data, for example 21 in a stat field, and is told it needs to be equal to or lower than 20. | Pass |
+| Click delete character on campaign info page | Clicked delete character button on the campaign info page. | User will be redirected to confirm_delete_character.html templte. | User is successfully redirected towards delete character page. | Pass |
+| Confirm delete, delete character page | Clicked confirm delete button. | User will delete associated character and be redirected towards campaign info page. | User successfully deletes character from the database, they are redirected towards campaign info page and the character is no longer displayed. | Pass |
+| Cancel delete, delete character page | Clicked cancel delete button. | User will be redirected to campaign info page. | User is successfully redirected to campaign info page. | Pass |
+| Click inventory button | Clicked inventory button on campaign info page. | User will be redirected to inventory.html. | User is successfully redirected to inventory page. | Pass |
+| Inventory Page | Load inventory page. | Associated characters inventory will be displayed. Add Item button will also be displayed. | User can view current characters inventory and has the option to add items. | Pass |
+| Click add item | Valid data is passed into fields and the add item button is clicked | User is able to add items to their inventory, new items added will be displayed in their inventory. | If the user adds valid data into the fields, they can successfully add an item to their inventory, it is then displayed in their inventory. | Pass |
+| Validators add item | Invalid data is passed into fields and the add item button is clicked. |If the user adds invalid data they will be asked to input a valid form of data into the specific field. | User is unable to add an item with invalid data. | Pass |
+| Click delete item (X) | Clicked (X) delete item button. | User will click the (X) delete item button and the current item will be removed from their inventory. | User is able to successfully remove an item from their inventory. | Pass |
+| Click return to campaign button | Clicked return to campaign button. | The user will be redirected to the campaign info page. | User is successfully redirected towards the campaign info page. | Pass |
+| Update character attributes | Clicked (+) or (-) button. | Clicking this button will increment (+) or decrement (-) targeted attribute. | User is able to successfully adjust attributes. | Pass |
+| Update character attributes validators. | Clicked (+) or (-) button. | User will be unable to adjust the 6 stat attributes (excluding health) past 20 or below 1. | User is successfully unable to adjust the 6 stat attributes past 20 or below 1. | Pass |
 | :--------------: | :------------: | :--------------: | :-----------: | :--: |
 | :--------------: | :------------: | :--------------: | :-----------: | :--: |
-| :--------------: | :------------: | :--------------: | :-----------: | :--: |
-| :--------------: | :------------: | :--------------: | :-----------: | :--: |
-| :--------------: | :------------: | :--------------: | :-----------: | :--: |
-| :--------------: | :------------: | :--------------: | :-----------: | :--: |
-
 
 
 
