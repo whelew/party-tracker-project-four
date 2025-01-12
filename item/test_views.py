@@ -54,3 +54,16 @@ class AddItemToInventory(TestCase):
         inventory_item = InventoryItem.objects.get(inventory=self.inventory, item=self.item)
         self.assertEqual(inventory_item.quantity, 2)
         self.assertRedirects(response, url)
+    
+    def test_authentication(self):
+        login_success = self.client.login(username='test', password='password123')
+        self.assertTrue(login_success)
+        url = reverse('add_item_to_inventory', kwargs={'character_id': self.character.id})
+        response = self.client.get(url)
+        if login_success:
+            self.assertEqual(response.status_code, 200)
+            self.assertTemplateUsed(response, 'inventory/character_inventory.html')
+        else:
+            self.assertEqual(response.status_code, 302)
+            self.assertRedirects(response, '/accounts/login/?next=' + url)
+        
