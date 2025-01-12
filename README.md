@@ -31,12 +31,46 @@
 The wire frames were the first thing I worked on when designing my website. The final product may not look exactly like the wireframes, 
 however being able to visualise the website allowed me to plan out the structure of each page but also the models I would need. 
 
+#### Login Page
+- My initial idea for the login page was going to pay tribute to how I remember the classic runescape login form. I wanted to have 
+the login box directly in the middle surronded by two images. I was able to achieve what I had imagined with it as I was able to find a 
+good free source image to use for my background.
 ![Image of login page wireframe](/static/images/login-wireframe.png)
+
+
+
+#### Home Page
+- Initally the home page was going to be seperate from the login page and act as a news area where updates would be posted.
+However I did not have enough time to get that implemented and the project already has a lot of detailed functions within the views
+I would love to implement this feature at another time. The home page became a shared page with the login page.
 ![Image of home page wireframe](/static/images/home-wireframe.png)
+
+
+#### Campaign Page
+- The campaign page is very similar to my original design, however the add and delete campaign buttons exist within the actual
+campaign table.
 ![Image of campaign page wireframe](/static/images/campaign-wireframe.png)
+
+
+#### Campaign Detail Page
+- The original design for the campaign page was quite bold. This is one of the designs that made me really have to think about how
+I could create models that would allow for new characters to be added, with inventories and then the ability to add an item.
+The design is very different from how it currently looks but I would love to be able to get the website looking like this one day.
 ![Image of campaign detail page wireframe](/static/images/campaign-detail-wireframe.png)
+
+#### Community Page
+- Originally I had planned a lot of features for my website, after a initial meeting with my mentor I showed him my wireframes and 
+he mentioned that covering such a wide variety of features will be a very difficult challenge. Therefore I decided to focus on the main
+purpose of the website and focused on the features that linked to the purpose the most.
 ![Image of community page wireframe](/static/images/community-wireframe.png)
+
+#### Contact Page
+- I wanted to be able to add a contact page but due to time constraints and the detail that my models, views and forms required it was 
+difficult to implement every original feature and idea.
 ![Image of contact page wireframe](/static/images/contact-wireframe.png)
+
+#### Monster Library
+- The monster library turned out just like I had imagined.
 ![Image of monster library page wireframe](/static/images/monster-library-wireframe.png)
 
 
