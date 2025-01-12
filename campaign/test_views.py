@@ -11,7 +11,18 @@ class CampaignTest(TestCase):
     def setUp(self):
         self.user = User.objects.create_user(username='test', password='password123', email='test@test.com')
         self.campaign = Campaign.objects.create(name='Testcampaign', description='This is a test', user=self.user)
-        self.character = Character.objects.create(name='Gandalf', campaign=self.campaign)
+        self.character = Character.objects.create(
+            name='Gandalf',
+            character_class = 'wizard',
+            health = 50
+            strength = 18
+            dexterity = 14
+            constitution = 20
+            intelligence = 20
+            wisdom = 20
+            charisma = 20
+            campaign=self.campaign
+            )
         self.inventory = Inventory.objects.get(character=self.character)
         login_success = self.client.login(username='test', password='password123')
         self.assertTrue(login_success)
@@ -115,3 +126,12 @@ class CampaignTest(TestCase):
             Campaign.objects.get(id=self.campaign.id)
         
         self.assertRedirects(response, reverse('campaign_list'))
+
+
+    # Test for deleting a character get request
+    def test_delete_character_get(self):
+        url = reverse('delete_character', kwargs={'character_id':self.character.id})
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.context['campaign'], self.campaign)
+        self.assertTemplateUsed('campaign/confirm_delete.html')
