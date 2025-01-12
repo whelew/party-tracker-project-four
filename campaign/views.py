@@ -10,16 +10,8 @@ from .forms import CampaignForm, CharacterForm
 @login_required
 def campaign_list(request):
     """
-    Display an individual :model:`campaign.Campaign`.
+    Display a list of :model:`campaign.Campaign` to the user.
 
-    **Context**
-
-    ``monster``
-        An instance of :model:`campaign.Campaign`.
-
-    **Template:**
-
-    :template:`campaign/campaign.html`
     """
      
     current_campaign = Campaign.objects.filter(user=request.user)
@@ -32,6 +24,11 @@ def campaign_list(request):
 
 @login_required
 def create_campaign(request):
+    """
+
+    Create an instance of campaign
+
+    """
     if request.method == 'POST':
         form = CampaignForm(request.POST)
         if form.is_valid():
