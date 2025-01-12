@@ -73,7 +73,7 @@ class CampaignTest(TestCase):
         url = reverse('create_character', kwargs={'campaign_id':self.campaign.id})
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed('campaign/create_campaign.html')
+        self.assertTemplateUsed('campaign/create_character.html')
 
 
     # Test create character post
