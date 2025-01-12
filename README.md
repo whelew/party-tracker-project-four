@@ -370,13 +370,28 @@ input and map it to my backend automatically.
 | Click home button on navbar | Clicked home button on the navbar. | User will be redirected towards homepage. | User is successfuly redirected towards homepage. | Pass |
 | Click campaign button on navbar or homepage | Clicked campaign button on the navbar or homepage. | If user is signed in they will be redirected towards campaign.html template | If user is signed in they will be successfully redirected towards campaign page. | Pass |
 | Click item button on navbar | Clicked item button on navbar | User will be redirected to the item library tempalte.  | User is successfully redirected towards item library page. | Pass |
-| CLick Monster Library button on navbar or home page | Clicked monster library button on navbar or homepage. | User will be redirected towards monster library template. | User is successfuly redirected towards the monster library. | Pass |
+| Click Monster Library button on navbar or home page | Clicked monster library button on navbar or homepage. | User will be redirected towards monster library template. | User is successfuly redirected towards the monster library. | Pass |
+| Load campaign.html | Campaign.html template on load shows users current campaigns. | If user has no campaigns, no campaigns will be shown, create new campaign button is displayed. | User without any campaigns is shown empty table with an add campaign button within it. | Pass |
+| campaign.html Add Campaign | Clicked create new campaign, user is redirected to create_campaign.html. | User will be redirected towards create_campaign.html. | User is successfully redirected to create campaign page. | Pass |
+| create_campaign.html add campaign | Added valid data to create character form and added campaign. | The user after adding valid data to the fields and clicking create campaign will be redirected to campaign.html with their newly created campaign being displayed. | User is successfully redirected to the campaign page where their newly created campaign is displayed. | Pass |
+| Click delete campaign on campaign page | Clicked delete campaign button. | User will be redirected to confirm_delete.html template. | User is successfully redirected to confirm delete page. | Pass |
+| Click confirm delete | Clicked confirm delete button | If confirm delete is clicked it will delete the campaign it is associated with and be removed from the users display. | Once clicked the campaign is successfully deleted from the database and removed from the users display. | Pass |
+| Click cancel delete | Clicked cancel delete button | The user will be redirected to campaign.html template. | The user is successfully redirected to the campaign page. | Pass |
+| Click campaign name button | Clicked the button associated with campaigns name. | User will be redirected to campaign_info.html template. | User is successfully redirected to campaign info page where all campaign information will be displayed. | Pass |
+| Click add character | Click add character button | If user clicks add character they will be redirected to create_character.html template. | User is successfully redirected to create character page. | Pass |
+| User has no characters | If the user has no characters no characters will be displayed in campaign_info.html template. | User will not have any characters populating their campaign info page. | A user who has no characters has the option to add characters but no characters are displayed. | Pass |
+| Click add character to campaign button. | Valid data is passed into fields and the add character to campaign button is clicked. | User will be able to add a new character to their current campaign. | User is able to successfully add a new character to their campaign. | Pass |
+| Click return to {title of their campaign button}. | Clicked return to {title of their campaign button} | User will be redirected back to campaign_info.html template. | USer is successfully redirected to their campaign info page. | Pass |
+| Invalid Input Create Character | Invalid data is passed into all fields. | If user inputs invalid data they will be asked to change their input before being able to create new character. | User inputs invalid data, for example 21 in a stat field, and is told it needs to be equal to or lower than 20. | Pass |
 | :--------------: | :------------: | :--------------: | :-----------: | :--: |
 | :--------------: | :------------: | :--------------: | :-----------: | :--: |
 | :--------------: | :------------: | :--------------: | :-----------: | :--: |
 | :--------------: | :------------: | :--------------: | :-----------: | :--: |
 | :--------------: | :------------: | :--------------: | :-----------: | :--: |
 | :--------------: | :------------: | :--------------: | :-----------: | :--: |
+
+
+
 
 ### Automated Testing
 
