@@ -362,12 +362,63 @@ input and map it to my backend automatically.
 ### Automated Testing
 
 - Django uses a standard python library module called [unittest](https://docs.python.org/3/library/unittest.html#module-unittest)
-to run automated tests.
+  to run automated tests.
+- Automated tests are important as it is a useful way to ensure your application is working correctly.
 - Each test was created within either a test_forms.py file or a test_views.py file. This was to allow seperation from the views and forms.
 - Here is a screenshot of my completed automated tests.
-- 26 in total with 0 issues.
+- 26 tests in total.
+- 0 issues found.
 
 ![Image of 26 Automated Tests completed without issue.](/static/images/unittest.png)
+
+#### View Tests
+
+The test_views.py are where the main percentage of my automated tests reside. Coding the tests was challenging at first,
+this was mostly due to the way my models interact with one another. As a user creates a campaign, within that campaign a user can have
+create many characters, each character then has one individual inventory. Therefore when I wanted to test my views I needed to create instances
+of every model: User, Campaign, Character, Inventory, Item, InventoryItem. After being able to complete one test, the methodology became
+more understandable and easier to implement. I was able to reuse part of my code when creating these instances.
+
+- DRY (Don't Repeat Yourself). Trying to keep inline with DRY principles, within each app I would normal create only one instance of the
+  models. For instance CampaignTest, defines the setUp().
+- Here is the CampaignTest example:
+-  self.user = User.objects.create_user(username='test', password='password123', email='test@test.com')
+-  self.campaign = Campaign.objects.create(name='Testcampaign', description='This is a test', user=self.user)
+-  self.character = Character.objects.create(
+  name='Gandalf',
+  character_class = 'wizard',
+  health = 50,
+  strength = 18,
+  dexterity = 1,
+  constitution = 20,
+  intelligence = 20,
+  wisdom = 20,
+  charisma = 20,
+  campaign=self.campaign
+  )
+-  self.inventory = Inventory.objects.get(character=self.character)
+-  login_success = self.client.login(username='test', password='password123')
+-  self.assertTrue(login_success)
+
+Here I define my User, Campaign, Character and Inventory, I also pass in a user authentication check as most of my views
+require the user to be logged in as I use the @login_required decorator.
+
+- After creating instances of my models, I am then able to test all of my other views from within this one test.
+- This helped me stick to a DRY rule of thumb and reduce the amount of code that would have been repeated if i hadn't.
+
+
+#### Form Tests
+
+The test_forms.py were created to test all forms.py. I only had a total of 3 form classes in total.
+I detail their design in the prior section. When designing the tests for these classes I had to take into account
+all the validation processes required when a user would fill the field inputs.
+
+- Firstly I checked if the form was valid. I would pass a valid entry of data to the form and then use assertTrue to check
+  that the data being passed is valid. If it was the test would pass.
+- Secondly I needed to check if when the data passed to the form is in valid, that it is recognised as invalid. Using assertFalse
+  I was able to check that the data being passed in was invalid. The difficulty with checking if that data was invalid was trying to
+  maintain a DRY principle. Therefore I used for loops to help pass in different invalid fields or values throughout
+  the forms.
 
 ### Coverage Report
 
