@@ -98,9 +98,19 @@ class CampaignTest(TestCase):
         self.assertEqual(current_characters.character_class, 'fighter')
         self.assertRedirects(response, reverse('campaign_info', kwargs = {'pk':self.campaign.id}))
 
-    # Test for deleting a campaign from db
+    # Test for deleting a campaign from db get request
     def test_delete_campaign_get(self):
         url = reverse('delete_campaign', kwargs={'campaign_id':self.campaign.id})
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed('campaign/confirm_delete.html')
+    
+    # Test for deleting a campaign post request
+    def test_delete_campaign_post(self):
+        url = reverse('delete_campaign', kwargs={'campaign_id':self.campaign.id})
+        response = self.client.post(url)
+
+        with self.assertRaises(Campaign.DoesNotExist):
+            Campaign.objects.get(id=self.campaign.id)
+        
+        self.assertRedirects(response, reverse('campaign_list'))
