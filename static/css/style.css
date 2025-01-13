@@ -8,6 +8,8 @@ body {
     color: #f9f4a6;
     margin: 0;
     padding: 0;
+    min-height: 100vh;
+    padding-bottom: 6%;
 }
 
 h1, th {
@@ -93,6 +95,7 @@ button {
     width: 100%;
     margin: 1rem 0;
     text-align: center;
+    overflow-x: auto; /* Allows horizontal scroll on small screens */
 }
 
 .table th, .table td {
@@ -101,6 +104,7 @@ button {
     text-shadow: darkgoldenrod;
     word-wrap: break-word;
     white-space: normal;
+    font-size: 1.5rem;
 }
 
 .table td {
@@ -281,6 +285,7 @@ footer {
     color: #f9f4a6;
     z-index: 1;
     height: 6%;
+    padding: 0.5rem 0
 }
 
 .footer-icons{
@@ -304,3 +309,14 @@ footer {
 
 /* Smaller Screens */
 
+@media screen and (max-width: 600px) {
+    .table {
+        font-size: 0.75rem;
+        padding: 0.5rem;
+    }
+
+    .table th, table td {
+        word-wrap: break-word;
+        white-space: nowrap;
+    }
+}
