@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Not Found - 404</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
-    <img src="/static/images/wizard-four-oh-four.jpg" alt="Ancient Forest Background" class="login-image">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h1>Oops! Page Not Found.</h1>
-                <p>We're sorry, but the page you are looking for simply isn't here.</p>
-                <p><a href="{% url 'home_page' %}">Return Home</a></p>
+    <div class="login-screen" >
+        <img src="/static/images/wizard-four-oh-four.jpg" alt="Ancient Wizard" class="login-image">
+        <div class="container h-50">
+            <div class="content-overlay col-content" style="font-size: 2.5rem;">
+                <div class="row-content">
+                    <h1>Oops! Page Not Found.</h1>
+                    <p>We're sorry, but the page you are looking for simply isn't here.</p>
+                    <p><a href="{% url 'home_page' %}" class="btn">Return Home</a></p>
+                </div>
             </div>
         </div>
     </div>
