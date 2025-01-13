@@ -1,5 +1,5 @@
 from django.db import models
-from django.core.validators import MinValueValidator
+from django.core.validators import MinValueValidator, MaxValueValidator
 
 
 class Inventory(models.Model):
@@ -36,7 +36,9 @@ class InventoryItem(models.Model):
         on_delete=models.CASCADE,
         related_name='inventory_items')
     quantity = models.IntegerField(
-        validators=[MinValueValidator(0)], default=1)
+        validators=[MinValueValidator(0),
+                    MaxValueValidator(100)],
+        default=1)
 
     class Meta:
         ordering = ['inventory', 'item']
