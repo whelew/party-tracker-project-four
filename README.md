@@ -300,6 +300,7 @@ stories by working in another. With more practice and refinement I will get a lo
 alot from working with user stories as it allowed me to have a visual representation of my production workflow. 
 
 Below is a visual representation of my workflow whilst using user stories.
+- You will also be able to see the project on my github repository through this link. [User Stories](https://github.com/users/whelew/projects/5)
 
 <details>
   <summary>User Story WorkFlow Images</summary>
