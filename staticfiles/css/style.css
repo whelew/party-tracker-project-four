@@ -1,5 +1,7 @@
 /* Layout of templates */
 
+
+/* Global CSS Stylings */
 body {
     font-family: "IM Fell DW Pica", serif;
     font-weight: 400;
@@ -8,8 +10,6 @@ body {
     color: #f9f4a6;
     margin: 0;
     padding: 0;
-    min-height: 100vh;
-    padding-bottom: 6%;
 }
 
 h1, th {
@@ -27,6 +27,10 @@ h1, th {
     padding: 2rem 1rem;
 }
 
+.col {
+    margin-bottom: 1rem;
+}
+
 /* Navbar Custom Settings */
 
 .navbar {
@@ -37,7 +41,7 @@ h1, th {
 }
 
 .bg-body-tertiary {
-    border: 4px solid #000000;
+    border: 4px solid #ecebb6;
     background-color: #684802 !important;
 }
 
@@ -99,12 +103,12 @@ button {
 }
 
 .table th, .table td {
-    padding: 0.75rem;
+    padding: 0.5rem;
     color: #f0a500;
     text-shadow: darkgoldenrod;
     word-wrap: break-word;
     white-space: normal;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .table td {
@@ -162,7 +166,7 @@ textarea {
 }
 
 .row-content {
-    border: 5px, solid, #000000;
+    border: 5px, solid, #ecebb6;
     background-color: rgba(59, 43, 43, 0.8);
     border-radius: 10px;
     text-align: center;
@@ -283,9 +287,12 @@ footer {
     width: 100%;
     background-color: #684802 !important;
     color: #f9f4a6;
-    z-index: 1;
-    height: 6%;
-    padding: 0.5rem 0
+    z-index: 2;
+    height: 8%;
+}
+
+footer, ul {
+    padding-left: 0rem;
 }
 
 .footer-icons{
@@ -294,7 +301,7 @@ footer {
     justify-content: space-evenly;
     list-style: none;
     color: #f9f4a6;
-    border: 5px, solid, #000000;
+    border: 5px, solid, #ecebb6;
 }
 .fa-brands {
     color: #f9f4a6;
