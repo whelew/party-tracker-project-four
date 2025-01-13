@@ -8,6 +8,7 @@
 - [Entity Relationship Diagram](#entity-relationship-diagram)
 - [User Stories](#user-stories)
 - [Color Scheme](#color-scheme)
+- [Typography](#typography)
 
 ## [Functionality](#functionality-1)
 
@@ -322,6 +323,17 @@ However the current design is working well, the color scheme works well together
 Here is a picture of the latest design:
 
 ![Image of color scheme](/static/images/coolers-board.png)
+
+### Typography
+
+I wanted to use a typography that really captured the essence of fantasy so I went with a classic Uncial Antiqua for all my headings and IM Fell English for 
+all other text.
+
+#### Uncial Antiqua
+![Image of Uncial Antiqua Typography](/static/images/google-font-uncial.png)
+
+#### IM Fell English
+![Image of IM Fell English Typography](/static/images/google-font-im-fell.png)
 
 
 ## Functionality
