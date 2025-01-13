@@ -22,6 +22,14 @@
 - [Integrity Error](#integrity-error)
 - [Circular Import Error](#circular-import)
 
+## [Future Implementations](#future-implementations-1)
+
+- [Community Page](#community-page-1)
+- [Contact Page](#contact-page-1)
+- [Chat Box](#chat-box)
+- [Invite to Campaign](#invite-to-campaign)
+
+
 ## [Credits & Technologies](#credits--technologies-1)
 
 ## Design
@@ -645,6 +653,52 @@ This was a relatively easy bug to fix, having DEBUG set to True quickly helped m
 Resolving the issue with using a string method instead of importing the Character model was a lot more efficient and fixed the error straight away.
 Although I created ERD's to help with model creation, in the future I will have to be more prepared with how my models will interact with one another.
 Keeping this lesson in mind will help me avoid errors such as this.
+
+## Future Implementations
+
+Unfortunately I was unable to add all of the features I wanted. Here are some of the future implementations that I would like to add to my 
+application.
+
+### Community Page
+A community page. This would take inspiration from the Code Institute blog walkthrough. 
+- A place for users to share posts, comment, like posts, share news of their quests and adventures.
+- It would be a great way for like minded people to get to know each other.
+- The website was designed with the idea of community in mind, a group of friends playing dungeons and dragons together. 
+Where they can keep track of their characters together with a simple but user friendly design.
+
+### Contact Page
+A contact page. This would allow users to get in touch if they have any user queries or require support.
+- It would include a contact box for the user to leave a message.
+- When sent the user will be emailed an automatic email saying the dev team will be in touch as soon as possible.
+
+### Chat Box
+A chat box inside the campaign pages.
+- This would be a really incredible feature to add, it would tie the site together. 
+- It would allow users to invite each other to chat like facebook or instagram. It would be useful for players who live 
+far away and don't have a microphone. That way they can still play D&D online and chat with their group about what they would
+like for their character to do. It could also be used for chatting and catching up.
+
+### Invite To Campaign
+The invite another player to your campaign.
+- I really wanted to add this feature as it would really help the purpose of the website.
+- The idea was to invite people to your campaign so each user can track their character personally. At the moment the website is set up
+for only one user to use a single campaign at a time. 
+- For this to be implemented would take a lot of time but it is a feature that I would be very keen on adding as soon as possible.
+
+## Overview 
+
+Overall, I am really proud of my website. I have a great love for the world of dungeons and dragons. It is a wonderful land of fantasy and 
+adventure, and working on this project has brought me a lot of joy. Working out all the challenges and bugs has been difficult but the more I 
+have progressed and worked on this project, the more I can see it being a real asset to a great community of people. It might not be the most 
+intricate of designs however I am proud of the functionality of the models, views and forms as they have worked well and as intended. I set out to design a tool for 
+D&D players to create and track campaigns, characters and items and that is what I have. There are many features I would like to add which I 
+wanted from the start and some others that came later on as I was designing the website. Keeping an agile frame of mind, I would add these features 
+later on in order of importance. 
+
+I hope you enjoy the design and functionality of the website so far, when I am able to improve this website I will as I can see a lot of potential 
+in what this website can become. I even have an idea about creating an AI bot that will create D&D adventures on the fly for a solo player or a 
+group of friends who don't have a Dungeon Master. Thank you for spending the time looking at my project, it is appreciated. Happy Questing. 
+
 
 ## Credits & Technologies
 
