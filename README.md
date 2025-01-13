@@ -7,6 +7,7 @@
 - [Wireframes](#wire-frames)
 - [Entity Relationship Diagram](#entity-relationship-diagram)
 - [User Stories](#user-stories)
+- [Color Scheme](#color-scheme)
 
 ## [Functionality](#functionality-1)
 
@@ -242,14 +243,14 @@ Below are the relationships between each database model:
 - Each entry in InventoryItems corresponds to a single Item, but an Item can belong to multiple inventories.
 - InventoryItems includes an item_id as a Foreign Key to Item.
 
-## User Stories
+### User Stories
 
 - User stories were a useful and producive tool for designing the website. It allowed me to think about being both a user and 
 a developer. 
 - It also helped focus my workflow, allowing me to focus on the most important factors first and leaving the less important features for 
 another time.
 
-### Structure
+#### Structure
 
 I created a user story template to help me populate my issues faster and then allowing me to get them associated with my project swiftly.
 The template consisted of:
@@ -268,25 +269,25 @@ can be marked as closed.
 ![User Story Template Image](/static/images/user-story-template.png)
 
 
-### Labels
+#### Labels
 
 Using a label system also made the decision making easier.
 
-#### Must Do
+##### Must Do
 A must do label told me that without fail this task needs to be completed.
 
-#### Should Do
+##### Should Do
 A should do label told me that this feature needs adding when it is next possible.
 
-#### Could Do
+##### Could Do
 A could do label told me that if I get time and I have no other important features that need working on then I will be able to focus my 
 time on implementing this feature.
 
-#### Won't Do
+##### Won't Do
 A won't do label told me that I will not work on this feature at all as it will either take to much time or the feature is of no value to
 the user or developer.
 
-### Workflow
+#### Workflow
 
 Overall the user stories were very useful. I believe I should have been more prepared when planning my user stories as during production I 
 found myself having to write new issues and add them. The benefit of this and also argument in favour of how I did my approach was that I was 
@@ -299,6 +300,7 @@ Below is a visual representation of my workflow whilst using user stories.
 
 <details>
   <summary>User Story WorkFlow Images</summary>
+  ![user story one](/static/images/user-story-one.png)
   <img src="/static/images/user-story-one.png" alt="user story one"/>
   <img src="/static/images/user-story-two.png" alt="user story two"/>
   <img src="/static/images/user-story-three.png" alt="user story three"/>
@@ -308,6 +310,18 @@ Below is a visual representation of my workflow whilst using user stories.
   <img src="/static/images/user-story-seven.png" alt="user story seven"/>
   <img src="/static/images/user-story-eight.png" alt="user story eight"/>
 </details>
+
+### Color Scheme
+
+The asthetic of the website went through a few ideas, I originally wanted to make a theme selector button which would allow the user
+to select a required theme. I was going to have D&D inspired themes such as, a dark dungeon, a forest, arcane magic. During the production
+the theme was not a major priorty as a lot of focus was required on the functionality of the website. 
+
+However the current design is working well, the color scheme works well together and I was able to finalise my design on the website [Coolers](https://coolors.co/).
+
+Here is a picture of the latest design:
+
+![Image of color scheme](/static/images/coolers-board.png)
 
 
 ## Functionality
@@ -756,6 +770,12 @@ The invite another player to your campaign.
 - The idea was to invite people to your campaign so each user can track their character personally. At the moment the website is set up
 for only one user to use a single campaign at a time. 
 - For this to be implemented would take a lot of time but it is a feature that I would be very keen on adding as soon as possible.
+
+### Theme Selector
+This will allow players to choose an active theme for the website.
+- The player will be able to cycle through different asthetic themes with the click of a button.
+- A forest theme, a dark dungeon, arcane magic, fire magic, deep waters. 
+- This is a nice feature to add however due to the time required to code it, it didn't have high priority on my list compared to other areas.
 
 ## Overview 
 
