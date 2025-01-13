@@ -6,6 +6,7 @@
 
 - [Wireframes](#wire-frames)
 - [Entity Relationship Diagram](#entity-relationship-diagram)
+- [User Stories](#user-stories)
 
 ## [Functionality](#functionality-1)
 
@@ -29,6 +30,9 @@
 - [Chat Box](#chat-box)
 - [Invite to Campaign](#invite-to-campaign)
 
+## [Overview](#overview-1)
+
+## [Deployment](#deployment-1)
 
 ## [Credits & Technologies](#credits--technologies-1)
 
@@ -237,6 +241,10 @@ Below are the relationships between each database model:
 
 - Each entry in InventoryItems corresponds to a single Item, but an Item can belong to multiple inventories.
 - InventoryItems includes an item_id as a Foreign Key to Item.
+
+## User Stories
+
+- USer Stories Go Here
 
 ## Functionality
 
@@ -699,6 +707,32 @@ I hope you enjoy the design and functionality of the website so far, when I am a
 in what this website can become. I even have an idea about creating an AI bot that will create D&D adventures on the fly for a solo player or a 
 group of friends who don't have a Dungeon Master. Thank you for spending the time looking at my project, it is appreciated. Happy Questing. 
 
+
+## Deployment
+
+### Cloning
+
+1. Go to the [party tracker](https://github.com/whelew/party-tracker-project-four) repository on github.
+2. Click on the "<> Code" button.
+3. Copy Https url or Github CLI link
+4. Open Git Bash
+5. Change your current working directory to the location where you want the clone directory 
+6. Type git clone, followed by copied url
+7. Create your local clone
+
+### Deploying to Heroku
+
+1. Create a new app on heroku
+2. Add required key:value pairs to app configurations. (SECRET_KEY, DATABSE_URL)
+3. Install a production ready webserver for heroku, I used [Gunicorn](https://gunicorn.org/)
+4. Add [Gunicorn](https://gunicorn.org/) to your requirements.txt
+5. Create a Procfile and declare the web process. (web: gunicorn project_name.wsgi)
+6. Set your DEBUG=False in your projects settings.py file
+7. Add herokuapp.com to ALLOWED_HOSTS list in your settings.py file
+8. Git commit and push your changes
+9. Connect heroku app to github repository
+10. Deploy to main branch
+11. Test your application has deployed correctly
 
 ## Credits & Technologies
 
