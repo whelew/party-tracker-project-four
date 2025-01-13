@@ -825,6 +825,12 @@ Resolving the issue with using a string method instead of importing the Characte
 Although I created ERD's to help with model creation, in the future I will have to be more prepared with how my models will interact with one another.
 Keeping this lesson in mind will help me avoid errors such as this.
 
+### Minor Bugs
+
+- Currently there is a validation issue that needs resolving when adding an item. MaxValueValidator is set to 200 however the user is able
+to add a quantity higher than this. 
+- Adding a high integer such as '9999999' will cause a server 500 error.
+
 ## Future Implementations
 
 Unfortunately I was unable to add all of the features I wanted. Here are some of the future implementations that I would like to add to my 
