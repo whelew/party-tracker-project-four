@@ -29,6 +29,14 @@ h1, th {
     margin-bottom: 1rem;
 }
 
+.display-1 {
+    padding-top: 1rem;
+}
+
+.con-pad {
+    padding-top: 0;
+}
+
 /* Navbar Custom Settings */
 
 .navbar {
