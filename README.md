@@ -244,7 +244,71 @@ Below are the relationships between each database model:
 
 ## User Stories
 
-- USer Stories Go Here
+- User stories were a useful and producive tool for designing the website. It allowed me to think about being both a user and 
+a developer. 
+- It also helped focus my workflow, allowing me to focus on the most important factors first and leaving the less important features for 
+another time.
+
+### Structure
+
+I created a user story template to help me populate my issues faster and then allowing me to get them associated with my project swiftly.
+The template consisted of:
+
+1. An empty title
+2. As a **role** I can **capability** so that **received benefit**
+3. **Acceptance Criteria:**
+- Acceptance criteria 1
+- Acceptance criteria 2
+- Acceptance criteria 3
+
+This allowed me to quickly name the user story, write about the needs of a feature for a site user or a developer.
+What it will do and why it will be of benefit. Following on from this will be a list of acceptance criteria before the user story
+can be marked as closed.
+
+![User Story Template Image](/static/images/user-story-template.png)
+
+
+### Labels
+
+Using a label system also made the decision making easier.
+
+#### Must Do
+A must do label told me that without fail this task needs to be completed.
+
+#### Should Do
+A should do label told me that this feature needs adding when it is next possible.
+
+#### Could Do
+A could do label told me that if I get time and I have no other important features that need working on then I will be able to focus my 
+time on implementing this feature.
+
+#### Won't Do
+A won't do label told me that I will not work on this feature at all as it will either take to much time or the feature is of no value to
+the user or developer.
+
+### Workflow
+
+Overall the user stories were very useful. I believe I should have been more prepared when planning my user stories as during production I 
+found myself having to write new issues and add them. The benefit of this and also argument in favour of how I did my approach was that I was 
+keeping in line with an agile mindset. I would review my user stories, adjust the labels, create new user stories as my project developed, both for 
+site users and developers. I wasn't always perfect at keeping track of them at times, I found myself realising I had already finished one of the user 
+stories by working in another. With more practice and refinement I will get a lot more adept at using them. It is a useful tool to know and I have learnt
+alot from working with user stories as it allowed me to have a visual representation of my production workflow. 
+
+Below is a visual representation of my workflow whilst using user stories.
+
+<details>
+  <summary>User Story WorkFlow Images</summary>
+  <img src="/static/images/user-story-one.png" alt="user story one"/>
+  <img src="/static/images/user-story-two.png" alt="user story two"/>
+  <img src="/static/images/user-story-three.png" alt="user story three"/>
+  <img src="/static/images/user-story-four.png" alt="user story four"/>
+  <img src="/static/images/user-story-five.png" alt="user story five"/>
+  <img src="/static/images/user-story-six.png" alt="user story six"/>
+  <img src="/static/images/user-story-seven.png" alt="user story seven"/>
+  <img src="/static/images/user-story-eight.png" alt="user story eight"/>
+</details>
+
 
 ## Functionality
 
