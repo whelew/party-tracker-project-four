@@ -718,6 +718,19 @@ All apps py files were tested using the [CI Python Linter](https://pep8ci.heroku
 - Note Party Tracker settings.py failed due to AUTH_PASSWORD_VALIDATORS
 being too long.
 
+#### LightHouse Testing
+
+I used google chromes built in lighthouse test to test the performance of my website.
+
+Overall my website got a high mark for it's overall performance, however when trying to test my campaign page, because
+the user is required to be authenticated it could only test the login url. However performance of testable 
+links showed a positive result.
+
+![Lighthouse test for home page](/static/images/lighthouse-home.png)
+![Lighthouse test for monster library](/static/images/lighthouse-monster.png)
+![Lighthouse test for item list](/static/images/lighthouse-item.png)
+![Lighthouse test for campaign](/static/images/lighthouse-campaign.png)
+
 ## Bugs and Debugging
 
 ### Integrity Error
