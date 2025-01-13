@@ -733,6 +733,17 @@ links showed a positive result.
 ![Lighthouse test for item list](/static/images/lighthouse-item.png)
 ![Lighthouse test for campaign](/static/images/lighthouse-campaign.png)
 
+#### Wave Web Accessibility Evaluation Tool
+
+I used [Wave](https://wave.webaim.org/) to test the accessibility of my website.
+As with the lighthouse test, I was restricted on being able to test parts of my website as heroku 
+would not allow the external software to connect due to user authentication restrictions.
+
+![Wave Web Accessibility Evaluation Tool test for ](/static/images/wave-home.png)
+![Wave Web Accessibility Evaluation Tool test for ](/static/images/wave-monster.png)
+![Wave Web Accessibility Evaluation Tool test for ](/static/images/wave-item.png)
+![Wave Web Accessibility Evaluation Tool test for ](/static/images/wave-login.png)
+
 ## Bugs and Debugging
 
 ### Integrity Error
