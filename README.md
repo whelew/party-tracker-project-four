@@ -690,10 +690,14 @@ Here is a coverage report using [coverage](https://coverage.readthedocs.io/en/7.
 |Campaign|forms.py|Pass|
 |Campaign|apps.py|Pass|
 |Campaign|admin.py|Pass|
-
-
-
-
+|Home|views.py|Pass|
+|Home|urls.py|Pass|
+|Home|test_views.py|Pass|
+|Home|views.py|Pass|
+|Home|views.py|Pass|
+|Home|views.py|Pass|
+|Home|views.py|Pass|
+|Home|views.py|Pass|
 
 ## Bugs and Debugging
 

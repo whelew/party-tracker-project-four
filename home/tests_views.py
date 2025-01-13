@@ -1,6 +1,7 @@
 from django.test import TestCase
 from django.urls import reverse
 
+
 class HomePageTest(TestCase):
     def test_home_page(self):
         url = reverse('home_page')
