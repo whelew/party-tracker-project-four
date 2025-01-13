@@ -830,6 +830,9 @@ Keeping this lesson in mind will help me avoid errors such as this.
 - Currently there is a validation issue that needs resolving when adding an item. MaxValueValidator is set to 200 however the user is able
 to add a quantity higher than this. 
 - Adding a high integer such as '9999999' will cause a server 500 error.
+- CSS styling for phone screens. One of the main issues with the website is how a few of the tables are laid out. I was not able to find a 
+comfortable formatting for the structure of campaign info, monster library, inventory. If the user holds their phone horizontally then the 
+structure of the website will be a lot more comfortable with phone screen sizes. I would like to resolve this issue when given the chance.
 
 ## Future Implementations
 
