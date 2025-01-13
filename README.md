@@ -745,6 +745,28 @@ would not allow the external software to connect due to user authentication rest
 ![Wave Web Accessibility Evaluation Tool test for ](/static/images/wave-item.png)
 ![Wave Web Accessibility Evaluation Tool test for ](/static/images/wave-login.png)
 
+#### W3C Html Validator
+
+I tried to test my projects html files, both through a direct input of my html and a url link. I have found using django 
+as a framework makes validating html quite tricky. Here are a couple of examples of results I would get when I tried to test 
+my projects html.
+
+![W3C Html Validator of direct input](/static/images/direct-html-validator.png)
+![W3C Html Validator of url input](/static/images/url-html-validator.png)
+
+- The issue is when a direct input of a template is passed into the validator it passes it back as an error because it is missing 
+the standard !HTML declaration at the head of the form. 
+- The issue when the url input is tested there are unclosed element errors, I checked through my html templates to double check that all elements
+had a closing tag which they did.
+- I will have to find a better approach to test for the validity of my html templates in future when working with Django. 
+
+
+#### JS Hint Validator
+
+Normally I would use [JS Hint Validator](https://jshint.com/) to check the validity of my javascript code.
+However all js operations are done through django and during my project most the code I have written has been python.
+Therefore I do not have anything to pass into the validity checker for javascript.
+
 ## Bugs and Debugging
 
 ### Integrity Error
@@ -830,9 +852,16 @@ Keeping this lesson in mind will help me avoid errors such as this.
 - Currently there is a validation issue that needs resolving when adding an item. MaxValueValidator is set to 200 however the user is able
 to add a quantity higher than this. 
 - Adding a high integer such as '9999999' will cause a server 500 error.
+
+### Resolved Minor Bugs
+
 - CSS styling for phone screens. One of the main issues with the website is how a few of the tables are laid out. I was not able to find a 
 comfortable formatting for the structure of campaign info, monster library, inventory. If the user holds their phone horizontally then the 
 structure of the website will be a lot more comfortable with phone screen sizes. I would like to resolve this issue when given the chance.
+
+- This has now been fixed, I was able to add an overflow: scroll function to allow the user to scroll along the tables that originally 
+caused the width of the phone screen to go beyond that of the navbar. The user is now able to scroll along the table to see all fields 
+without the table forcing the width of the page to be larger than that of the phone screen.
 
 ## Future Implementations
 
