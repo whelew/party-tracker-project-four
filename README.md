@@ -19,6 +19,8 @@
 
 - [Manual](#manual-testing)
 - [Automated](#automated-testing)
+- [Coverage Report](#coverage-report)
+- [Validation Tests](#validation-tests)
 
 ## [Bugs and Debugging](#bugs-and-debugging-1)
 
