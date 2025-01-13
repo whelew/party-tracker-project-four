@@ -678,7 +678,9 @@ Here is a coverage report using [coverage](https://coverage.readthedocs.io/en/7.
 #### The W3C CSS Validation Service
 ![Image of CSS validation service passed](/static/images/css-validation.png)
 
-#### [CI Python Linter](https://pep8ci.herokuapp.com/#)
+#### CI Python Linter
+
+All apps py files were tested using the [CI Python Linter](https://pep8ci.herokuapp.com/#).
 
 |App|File|Result|
 |:--:|:--:|:--:|

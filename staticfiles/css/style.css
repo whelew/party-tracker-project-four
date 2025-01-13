@@ -8,7 +8,6 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    padding-bottom: 6%;
 }
 
 h1, th {
@@ -219,9 +218,15 @@ textarea {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     object-fit: cover;
     z-index: 0;
+}
+
+/* Hide Forgot Password Button */
+
+a[href*="password/reset"] {
+    display: none;
 }
 
 /* Invetnory Screen */
