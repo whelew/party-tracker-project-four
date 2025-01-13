@@ -2,6 +2,7 @@ from django.test import TestCase
 from .forms import AddItemForm
 from .models import Item
 
+
 class TestAddItemForm(TestCase):
 
     def setUp(self):
@@ -10,7 +11,6 @@ class TestAddItemForm(TestCase):
 
     def test_form_is_valid(self):
         """ Test for all fields"""
-
         form = AddItemForm({
             'item': self.item_instance.id,
             'quantity': '1',
@@ -28,10 +28,11 @@ class TestAddItemForm(TestCase):
 
     def test_form_invalid_quantity(self):
         """Test empty quantity, or below 0"""
-
         for validator in ['', 0]:
             form = AddItemForm({
                 'item': self.item_instance.id,
                 'quantity': validator
             })
-        self.assertFalse(form.is_valid(), msg=f'Form is not valid if quantity value is {validator}')
+        self.assertFalse(
+            form.is_valid(),
+            msg=f'Form is not valid if quantity value is {validator}')

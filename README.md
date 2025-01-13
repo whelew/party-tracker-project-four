@@ -702,14 +702,19 @@ Here is a coverage report using [coverage](https://coverage.readthedocs.io/en/7.
 |Monster|admin.py|Pass|
 |Item|views.py|Pass|
 |Item|urls.py|Pass|
-|Item|.py|Pass|
-|Item|.py|Pass|
-|Item|.py|Pass|
-|Item|.py|Pass|
-|Item|.py|Pass|
+|Item|test_views.py|Pass|
+|Item|test_forms.py|Pass|
+|Item|models.py|Pass|
+|Item|forms.py|Pass|
+|Item|apps.py|Pass|
+|Item|admin.py|Pass|
+|Party Tracker|wsgi.py|Pass|
+|Party Tracker|urls.py|Pass|
+|Party Tracker|asgi.py|Pass|
+|Party Tracker|settings.py|Fail|
 
-
-
+- Note Party Tracker settings.py failed due to AUTH_PASSWORD_VALIDATORS
+being too long.
 
 ## Bugs and Debugging
 
