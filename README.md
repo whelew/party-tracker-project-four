@@ -693,11 +693,23 @@ Here is a coverage report using [coverage](https://coverage.readthedocs.io/en/7.
 |Home|views.py|Pass|
 |Home|urls.py|Pass|
 |Home|test_views.py|Pass|
-|Home|views.py|Pass|
-|Home|views.py|Pass|
-|Home|views.py|Pass|
-|Home|views.py|Pass|
-|Home|views.py|Pass|
+|Home|apps.py|Pass|
+|Monster|views.py|Pass|
+|Monster|urls.py|Pass|
+|Monster|test_views.py|Pass|
+|Monster|models.py|Pass|
+|Monster|apps.py|Pass|
+|Monster|admin.py|Pass|
+|Item|views.py|Pass|
+|Item|urls.py|Pass|
+|Item|.py|Pass|
+|Item|.py|Pass|
+|Item|.py|Pass|
+|Item|.py|Pass|
+|Item|.py|Pass|
+
+
+
 
 ## Bugs and Debugging
 

@@ -1,9 +1,6 @@
-from django.shortcuts import render, get_object_or_404
-from django.http import HttpResponse
-from django.views import generic
+from django.shortcuts import render
 from .models import Monster
 
-# Create your views here.
 
 def monster_library(request):
     """
@@ -18,7 +15,7 @@ def monster_library(request):
 
     :template:`monster/monster_library.html`
     """
-     
+
     monsters = Monster.objects.all()
 
     return render(

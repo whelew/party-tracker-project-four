@@ -3,8 +3,6 @@ from django.contrib.auth.decorators import login_required
 from .models import Item, Inventory, InventoryItem
 from .forms import AddItemForm
 
-# Create your views here.
-
 
 def item_list(request):
     """
@@ -18,18 +16,22 @@ def item_list(request):
         {'items': items},
     )
 
+
 @login_required
 def add_item_to_inventory(request, character_id):
     """
-    Add item to specific character invetory using character id to match correct character inventory
+    Add item to specific character invetory
+    using character id to match correct character inventory
     """
 
     # Retrieve inventory belonging to specific character.
-    inventory = get_object_or_404(Inventory, character__id=character_id, character__campaign__user=request.user)
+    inventory = get_object_or_404(
+        Inventory,
+        character__id=character_id,
+        character__campaign__user=request.user)
 
     # Retrieve exsisting items in characters inventory.
     inventory_items = inventory.inventory_items.select_related('item')
-
 
     # Handles form request
     if request.method == 'POST':
@@ -40,28 +42,27 @@ def add_item_to_inventory(request, character_id):
 
             # Check if item exsists in inventory.
             inventory_item, created = InventoryItem.objects.get_or_create(
-                inventory = inventory,
+                inventory=inventory,
                 item=item,
-                defaults={'quantity' : quantity}
+                defaults={'quantity': quantity}
             )
 
             # Updates quantity of the item.
             if not created:
                 inventory_item.quantity += quantity
                 inventory_item.save()
-            
+
             # Refresh form after adding item.
             return redirect('add_item_to_inventory', character_id=character_id)
-        
+
     else:
         form = AddItemForm()
-        
 
         # Render the form alongside inventory and current inventory items.
         return render(request, 'inventory/character_inventory.html', {
-            'form' : form, 
-            'inventory' : inventory,
-            'inventory_items' : inventory_items,
+            'form': form,
+            'inventory': inventory,
+            'inventory_items': inventory_items,
             })
 
 
@@ -78,4 +79,5 @@ def delete_item(request, inventory_item_id):
 
     if request.method == 'POST':
         inventory_item.delete()
-        return redirect('add_item_to_inventory', character_id=inventory_item.inventory.character.id)
+        return redirect('add_item_to_inventory',
+                        character_id=inventory_item.inventory.character.id)
