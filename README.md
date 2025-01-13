@@ -672,6 +672,12 @@ Here is a coverage report using [coverage](https://coverage.readthedocs.io/en/7.
 |                     party_tracker/urls.py                     |   3   |  0   | 100%  |
 |                             TOTAL                             |  597  |  36  |  94%  |
 
+
+### Validation Tests
+
+#### The W3C CSS Validation Service
+![Image of CSS validation service passed](/static/images/css-validation.png)
+
 ## Bugs and Debugging
 
 ### Integrity Error
