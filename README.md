@@ -678,6 +678,23 @@ Here is a coverage report using [coverage](https://coverage.readthedocs.io/en/7.
 #### The W3C CSS Validation Service
 ![Image of CSS validation service passed](/static/images/css-validation.png)
 
+#### [CI Python Linter](https://pep8ci.herokuapp.com/#)
+
+|App|File|Result|
+|:--:|:--:|:--:|
+|Campaign|views.py|Pass|
+|Campaign|urls.py|Pass|
+|Campaign|test_views.py|Pass|
+|Campaign|test_forms.py|Pass|
+|Campaign|models.py|Pass|
+|Campaign|forms.py|Pass|
+|Campaign|apps.py|Pass|
+|Campaign|admin.py|Pass|
+
+
+
+
+
 ## Bugs and Debugging
 
 ### Integrity Error

@@ -52,8 +52,8 @@ def campaign_info(request, pk):
     campaign = get_object_or_404(Campaign, pk=pk, user=request.user)
     characters = campaign.characters.all()
 
-    return render(request,'campaign/campaign_info.html',
-                {'campaign': campaign, 'characters': characters})
+    return render(request, 'campaign/campaign_info.html',
+                  {'campaign': campaign, 'characters': characters})
 
 
 @login_required
@@ -69,11 +69,12 @@ def create_character(request, campaign_id):
             character = form.save(commit=False)
             character.campaign = campaign
             character.save()
-            return redirect('campaign_info', pk=campaign_id) 
+            return redirect('campaign_info', pk=campaign_id)
     else:
         form = CharacterForm()
 
-    return render(request, 'campaign/create_character.html', {'form' : form, 'campaign' : campaign})
+    return render(request, 'campaign/create_character.html',
+                  {'form': form, 'campaign': campaign})
 
 
 @login_required
@@ -84,8 +85,7 @@ def delete_campaign(request, campaign_id):
 
     campaign = get_object_or_404(Campaign, id=campaign_id, user=request.user)
 
-
-    # Once campaign has been deleted 
+    # Once campaign has been deleted
     # User will be informed and redirected back to campaign list.
     if request.method == 'POST':
         campaign.delete()
@@ -93,7 +93,8 @@ def delete_campaign(request, campaign_id):
                          f'{ campaign.name } has been deleted succesfully.')
         return redirect('campaign_list')
 
-    return render(request, 'campaign/confirm_delete.html', {'campaign' : campaign})
+    return render(request,
+                  'campaign/confirm_delete.html', {'campaign': campaign})
 
 
 @login_required
@@ -101,13 +102,16 @@ def delete_character(request, character_id):
     """
     Allow a user to delete a character from a campaign
     """
-    character = get_object_or_404(Character, id=character_id, campaign__user=request.user)
+    character = get_object_or_404(
+        Character, id=character_id, campaign__user=request.user)
 
     if request.method == 'POST':
         character.delete()
         return redirect('campaign_info', pk=character.campaign.id)
 
-    return render(request, 'campaign/confirm_delete_character.html', {'character' : character})
+    return render(
+        request, 'campaign/confirm_delete_character.html',
+        {'character': character})
 
 
 @login_required
@@ -116,7 +120,8 @@ def update_character_stat(request, character_id, attribute, action):
     Allow user to adjust characters stats in increments of +1 or -1
     """
 
-    character = get_object_or_404(Character, id=character_id, campaign__user=request.user)
+    character = get_object_or_404(
+        Character, id=character_id, campaign__user=request.user)
 
     valid_attributes = [
         'health',
